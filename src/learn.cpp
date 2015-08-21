@@ -9,6 +9,7 @@ Description : Learn in gtkmm
 */
 
 #include "start.h"
+#include "rwin.h"
 #include <gtkmm/main.h>
 
 int main (int argc, char *argv[])

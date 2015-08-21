@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : learn.cpp
+Name : start.cpp
 Author : makowiec
 Version :
 Copyright : priv
@@ -9,13 +9,15 @@ Description : Learn in gtkmm
 */
 
 #include "start.h"
+#include "rwin.h"
 #include <iostream>
+#include <gtkmm/main.h>
 
 Start::Start()
-: m_button_1("North"), m_button_2("South") // creates a new button with label "Hello World".
+: m_button_1("North"), m_button_2("South") // tworzenie przycikow
 
 {
-// Parametry okna.
+// Parametry okna
 set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
 set_title("Learn 2015"); //tytul
 set_size_request(300,150); //rozmiar
@@ -46,12 +48,18 @@ show_all();
 Start::~Start()
 {
 }
-
+// Wywolanie fukcji dla przyciskow
 void Start::on_button_clicked_1()
 {
-std::cout << "Hello Pó³noc" << std::endl;
+
+	Startr rwin;
+	//Shows the window and returns when it is closed.
+	Gtk::Main::run(rwin);
+
+
+//std::cout << "Hello Pó³noc" << std::endl;
 }
 void Start::on_button_clicked_2()
 {
-std::cout << "Hello Po³udnie" << std::endl;
+std::cout << "Hello Hella" << std::endl;
 }

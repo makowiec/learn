@@ -12,7 +12,7 @@ Description : Learn in gtkmm
 #include <iostream>
 
 Startr::Startr()
-: m_button_r1("North"), m_button_r2("South") // creates a new button with label "Hello World".
+: m_button_r1("Polnoc"), m_button_r2("Poludnie") // creates a new button with label "Hello World".
 
 {
 // Parametry okna.
