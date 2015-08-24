@@ -25,23 +25,6 @@ set_resizable( false ); // blokowanie zmiany rozmiaru okna
 // Tabela 1
 dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
 
-/*
-// Zadanie 1
-tab_r1.attach ( button_info_r01, 1, 2, 0, 1 );
-tab_r1.attach ( button_sys_r01, 2, 3, 0, 1 );
-tab_r1.attach ( button_pic_r01, 3, 4, 0, 1 );
-tab_r1.attach ( button_res_r01, 4, 5, 0, 1 );
-// Zadanie 2
-tab_r1.attach ( button_info_r02, 1, 2, 1, 2 );
-tab_r1.attach ( button_sys_r02, 2, 3, 1, 2 );
-tab_r1.attach ( button_pic_r02, 3, 4, 1, 2 );
-tab_r1.attach ( button_res_r02, 4, 5, 1, 2 );
-// Zadanie 3
-tab_r1.attach ( button_info_r03, 1, 2, 1, 2 );
-tab_r1.attach ( button_sys_r03, 2, 3, 1, 2 );
-tab_r1.attach ( button_pic_r03, 3, 4, 1, 2 );
-tab_r1.attach ( button_res_r03, 4, 5, 1, 2 );
-*/
 
 // Kontener poziomy 1
 //Kontener_poziomy_r1.pack_start( m_button_r1, Gtk::PACK_EXPAND_WIDGET, 10 );
@@ -71,6 +54,9 @@ Rwin::~Rwin()
 
 void Rwin::dodawanie_przyciskow_tab_r1()
 {
+	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
+	tab_r1.set_col_spacings(50); //odstepy pomiedzy kolumnami
+
 	for( int i = 0; i < 10; ++i )
 	    {
 		tab_r1.attach( button_info_r[i], 1, 2, i, i+1 );
