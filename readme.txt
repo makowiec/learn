@@ -34,3 +34,13 @@ Windows
 11. C/C++ / Settings / Tool Settings
 12. GCC C++ Compiler / Miscellaneous / Other flags dodanie -mms-bitfields
 13. GCC C Compiler / Miscellaneous / Other flags dodanie -mms-bitfields
+
+ToDo
+--------------------------------------------------
+ 1. Losowanie 10 liczb z puli okreœlonej iloœci¹ zadañ;
+ 2. Otwieranie dokumentu pdf;
+ 3. Otwietanie plików graficznych;
+ 4. Wczytywanie wspó³rzêdnych z plików tekstowych;
+ 5. Otwieranie plikow graficznych i rysowanie figur 
+ 	geometrycznych wed³ug wczytanych wspó³rzêdnych;
+ 6. Dodanie narzêdzi dla plików graficznych;
