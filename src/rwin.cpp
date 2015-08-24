@@ -10,6 +10,7 @@ Description : Okno dla danych z North ;)
 
 #include "rwin.h"
 #include <iostream>
+#include <cstdio>
 
 Rwin::Rwin()
 //: m_button_r1("Polnoc"), m_button_r2("Poludnie") // creates a new button with label "Hello World".
@@ -24,6 +25,8 @@ set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
 // Tabela 1
 dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
+dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
+
 
 
 // Kontener poziomy 1
@@ -59,10 +62,27 @@ void Rwin::dodawanie_przyciskow_tab_r1()
 
 	for( int i = 0; i < 10; ++i )
 	    {
-		tab_r1.attach( button_info_r[i], 1, 2, i, i+1 );
-		tab_r1.attach( button_sys_r[i], 2, 3, i, i+1 );
-		tab_r1.attach( button_pic_r[i], 3, 4, i, i+1 );
-		tab_r1.attach( button_res_r[i], 4, 5, i, i+1 );
+		tab_r1.attach( labet_info_r[i], 0, 1, i+1, i+2 );
+		tab_r1.attach( button_info_r[i], 1, 2, i+1, i+2 );
+		tab_r1.attach( button_sys_r[i], 2, 3, i+1, i+2 );
+		tab_r1.attach( button_pic_r[i], 3, 4, i+1, i+2 );
+		tab_r1.attach( button_res_r[i], 4, 5, i+1, i+2 );
+	    }
+}
+
+void Rwin::dodanie_napisow_tab_r1()
+{
+
+	for( int i = 1; i < 11; ++i )
+	    {
+	        /* Konwertujemy liczbe na lancuch znakow */
+	        char Temp[11];
+
+
+	        sprintf( Temp, "Zadanie %i", i);
+
+	        /* Ustawiamy etykiete */
+	        labet_info_r[i-1].set_label( Temp );
 	    }
 }
 /*void Rwin::on_button_clicked_r1()

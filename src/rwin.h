@@ -18,6 +18,7 @@ protected:
 //void on_button_clicked_r1();
 //void on_button_clicked_r2();
 void dodawanie_przyciskow_tab_r1();
+void dodanie_napisow_tab_r1();
 
 private:
 Gtk::Table tab_r1; // tabela
@@ -26,7 +27,8 @@ button_info_r[10], // biezaca informacja o obiekcie
 button_sys_r[10], // archiwalna informacja o obiekcie
 button_pic_r[10], // podglad obiektu w zewnetrznym programie
 button_res_r[10]; // podglad rezultatu
-
+Gtk::Label
+labet_info_r[10];
 };
 
 #endif // GTKMM_EXAMPLE_RWIN_H
