@@ -18,13 +18,30 @@ Rwin::Rwin()
 // Parametry okna.
 set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
 set_title("Learn 2015"); //tytul
-set_size_request(300,150); //rozmiar
+set_size_request(800,600); //rozmiar
 set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
 set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
 // Tabela 1
+dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
 
-
+/*
+// Zadanie 1
+tab_r1.attach ( button_info_r01, 1, 2, 0, 1 );
+tab_r1.attach ( button_sys_r01, 2, 3, 0, 1 );
+tab_r1.attach ( button_pic_r01, 3, 4, 0, 1 );
+tab_r1.attach ( button_res_r01, 4, 5, 0, 1 );
+// Zadanie 2
+tab_r1.attach ( button_info_r02, 1, 2, 1, 2 );
+tab_r1.attach ( button_sys_r02, 2, 3, 1, 2 );
+tab_r1.attach ( button_pic_r02, 3, 4, 1, 2 );
+tab_r1.attach ( button_res_r02, 4, 5, 1, 2 );
+// Zadanie 3
+tab_r1.attach ( button_info_r03, 1, 2, 1, 2 );
+tab_r1.attach ( button_sys_r03, 2, 3, 1, 2 );
+tab_r1.attach ( button_pic_r03, 3, 4, 1, 2 );
+tab_r1.attach ( button_res_r03, 4, 5, 1, 2 );
+*/
 
 // Kontener poziomy 1
 //Kontener_poziomy_r1.pack_start( m_button_r1, Gtk::PACK_EXPAND_WIDGET, 10 );
@@ -38,6 +55,7 @@ set_resizable( false ); // blokowanie zmiany rozmiaru okna
 //m_button_r2.signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_r2));
 
 // This packs the button into the Window (a container).
+
 add( tab_r1 );
 show_all();
 //add(m_button);
@@ -51,6 +69,16 @@ Rwin::~Rwin()
 {
 }
 
+void Rwin::dodawanie_przyciskow_tab_r1()
+{
+	for( int i = 0; i < 10; ++i )
+	    {
+		tab_r1.attach( button_info_r[i], 1, 2, i, i+1 );
+		tab_r1.attach( button_sys_r[i], 2, 3, i, i+1 );
+		tab_r1.attach( button_pic_r[i], 3, 4, i, i+1 );
+		tab_r1.attach( button_res_r[i], 4, 5, i, i+1 );
+	    }
+}
 /*void Rwin::on_button_clicked_r1()
 {
 std::cout << "Hello Pó³noc" << std::endl;
