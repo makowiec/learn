@@ -60,9 +60,11 @@ void Rwin::dodawanie_przyciskow_tab_r1()
 	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
 	tab_r1.set_col_spacings(50); //odstepy pomiedzy kolumnami
 
+	tab_r1.attach( label_head_r, 0, 5, 0, 1 );
+
 	for( int i = 0; i < 10; ++i )
 	    {
-		tab_r1.attach( labet_info_r[i], 0, 1, i+1, i+2 );
+		tab_r1.attach( label_info_r[i], 0, 1, i+1, i+2 );
 		tab_r1.attach( button_info_r[i], 1, 2, i+1, i+2 );
 		tab_r1.attach( button_sys_r[i], 2, 3, i+1, i+2 );
 		tab_r1.attach( button_pic_r[i], 3, 4, i+1, i+2 );
@@ -73,6 +75,8 @@ void Rwin::dodawanie_przyciskow_tab_r1()
 void Rwin::dodanie_napisow_tab_r1()
 {
 
+	label_head_r.set_label( "Rrr" );
+
 	for( int i = 1; i < 11; ++i )
 	    {
 	        /* Konwertujemy liczbe na lancuch znakow */
@@ -82,7 +86,7 @@ void Rwin::dodanie_napisow_tab_r1()
 	        sprintf( Temp, "Zadanie %i", i);
 
 	        /* Ustawiamy etykiete */
-	        labet_info_r[i-1].set_label( Temp );
+	        label_info_r[i-1].set_label( Temp );
 	    }
 }
 /*void Rwin::on_button_clicked_r1()

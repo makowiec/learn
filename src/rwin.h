@@ -28,7 +28,8 @@ button_sys_r[10], // archiwalna informacja o obiekcie
 button_pic_r[10], // podglad obiektu w zewnetrznym programie
 button_res_r[10]; // podglad rezultatu
 Gtk::Label
-labet_info_r[10];
+label_info_r[10], //etykiety tetowe pierwsze kolumny
+label_head_r; // naglowek
 };
 
 #endif // GTKMM_EXAMPLE_RWIN_H
