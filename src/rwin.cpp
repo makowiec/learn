@@ -11,7 +11,7 @@ Description : Learn in gtkmm
 #include "rwin.h"
 #include <iostream>
 
-Startr::Startr()
+Rwin::Rwin()
 : m_button_r1("Polnoc"), m_button_r2("Poludnie") // creates a new button with label "Hello World".
 
 {
@@ -30,8 +30,8 @@ Kontener_poziomy_r1.set_homogeneous( true ); //Ujednolicenie rozmiaru przyciskow
 
 // When the button receives the "clicked" signal, it will call the
 // on_button_clicked() method defined below.
-m_button_r1.signal_clicked().connect(sigc::mem_fun(*this, &Startr::on_button_clicked_r1));
-m_button_r2.signal_clicked().connect(sigc::mem_fun(*this, &Startr::on_button_clicked_r2));
+m_button_r1.signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_r1));
+m_button_r2.signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_r2));
 
 // This packs the button into the Window (a container).
 add( Kontener_poziomy_r1 );
@@ -43,15 +43,15 @@ show_all();
 //m_button_2.show();
 }
 
-Startr::~Startr()
+Rwin::~Rwin()
 {
 }
 
-void Startr::on_button_clicked_r1()
+void Rwin::on_button_clicked_r1()
 {
 std::cout << "Hello Pó³noc" << std::endl;
 }
-void Startr::on_button_clicked_r2()
+void Rwin::on_button_clicked_r2()
 {
 std::cout << "Hello Po³udnie" << std::endl;
 }

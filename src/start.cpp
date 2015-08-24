@@ -4,7 +4,7 @@ Name : start.cpp
 Author : makowiec
 Version :
 Copyright : priv
-Description : Learn in gtkmm
+Description : G³ówne okno programu
 ============================================================================
 */
 
@@ -52,7 +52,7 @@ Start::~Start()
 void Start::on_button_clicked_1()
 {
 
-	Startr rwin;
+	Rwin rwin;
 	//Shows the window and returns when it is closed.
 	Gtk::Main::run(rwin);
 

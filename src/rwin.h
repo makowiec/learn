@@ -1,16 +1,16 @@
-#ifndef GTKMM_EXAMPLE_STARTR_H
-#define GTKMM_EXAMPLE_STARTR_H
+#ifndef GTKMM_EXAMPLE_RWIN_H
+#define GTKMM_EXAMPLE_RWIN_H
 
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 
-class Startr : public Gtk::Window
+class Rwin : public Gtk::Window
 {
 
 public:
-Startr();
-virtual ~Startr();
+Rwin();
+virtual ~Rwin();
 
 protected:
 //Signal handlers:
@@ -22,4 +22,4 @@ Gtk::HBox Kontener_poziomy_r1; // Deklaracja obiektu listy poziomej
 Gtk::Button m_button_r1, m_button_r2; // Dekretacja przycisku
 };
 
-#endif // GTKMM_EXAMPLE_STARTR_H
+#endif // GTKMM_EXAMPLE_RWIN_H

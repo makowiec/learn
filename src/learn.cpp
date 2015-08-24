@@ -4,7 +4,7 @@ Name : learn.cpp
 Author : makowiec
 Version :
 Copyright : priv
-Description : Learn in gtkmm
+Description : Program do nauki
 ============================================================================
 */
 
