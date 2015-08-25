@@ -2,6 +2,7 @@
 #define GTKMM_EXAMPLE_RWIN_H
 
 #include <gtkmm/button.h>
+#include <gtkmm/image.h>
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm.h>
@@ -15,10 +16,9 @@ virtual ~Rwin();
 
 protected:
 //Signal handlers:
-//void on_button_clicked_r1();
-//void on_button_clicked_r2();
 void dodawanie_przyciskow_tab_r1();
 void dodanie_napisow_tab_r1();
+void dodanie_ikon_tab_r1();
 
 private:
 Gtk::Table tab_r1; // tabela
@@ -30,6 +30,8 @@ button_res_r[10]; // podglad rezultatu
 Gtk::Label
 label_info_r[10], //etykiety tetowe pierwsze kolumny
 label_head_r; // naglowek
+Gtk::Image
+image_info_r1;
 };
 
 #endif // GTKMM_EXAMPLE_RWIN_H

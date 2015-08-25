@@ -26,14 +26,7 @@ set_resizable( false ); // blokowanie zmiany rozmiaru okna
 // Tabela 1
 dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
 dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
-
-
-
-// Kontener poziomy 1
-//Kontener_poziomy_r1.pack_start( m_button_r1, Gtk::PACK_EXPAND_WIDGET, 10 );
-//Kontener_poziomy_r1.pack_start( m_button_r2, Gtk::PACK_EXPAND_WIDGET, 10 );
-
-//Kontener_poziomy_r1.set_homogeneous( true ); //Ujednolicenie rozmiaru przyciskow
+dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
 
 // When the button receives the "clicked" signal, it will call the
 // on_button_clicked() method defined below.
@@ -53,6 +46,13 @@ show_all();
 
 Rwin::~Rwin()
 {
+
+}
+
+void Rwin::dodanie_ikon_tab_r1()
+
+{
+
 }
 
 void Rwin::dodawanie_przyciskow_tab_r1()
