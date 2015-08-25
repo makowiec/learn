@@ -6,6 +6,7 @@
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm.h>
+#include <gdk/gdk.h>
 
 class Rwin : public Gtk::Window
 {
@@ -30,8 +31,9 @@ button_res_r[10]; // podglad rezultatu
 Gtk::Label
 label_info_r[10], //etykiety tetowe pierwsze kolumny
 label_head_r; // naglowek
-Gtk::Image
-image_info_r1;
+//Gtk::Widget
+//widget_1;
+//image_info_r1;
 };
 
 #endif // GTKMM_EXAMPLE_RWIN_H

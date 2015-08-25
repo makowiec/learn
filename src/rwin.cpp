@@ -28,6 +28,7 @@ dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
 dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
 dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
 
+
 // When the button receives the "clicked" signal, it will call the
 // on_button_clicked() method defined below.
 //m_button_r1.signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_r1));
@@ -52,12 +53,18 @@ Rwin::~Rwin()
 void Rwin::dodanie_ikon_tab_r1()
 
 {
-
+	for( int i = 0; i < 10; ++i )
+	    {
+		button_info_r[i].add_pixlabel("./icons/info_icon.png", "");
+		button_sys_r[i].add_pixlabel("./icons/search_icon.png", "");
+		button_pic_r [i].add_pixlabel("./icons/rtg_icon.png", "");
+		button_res_r[i].add_pixlabel("./icons/gear_icon.png", "");
+	    }
 }
 
 void Rwin::dodawanie_przyciskow_tab_r1()
 {
-	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
+	tab_r1.set_row_spacings(5); //odstepy pomiedzy wierszami
 	tab_r1.set_col_spacings(50); //odstepy pomiedzy kolumnami
 
 	tab_r1.attach( label_head_r, 0, 5, 0, 1 );
@@ -69,7 +76,7 @@ void Rwin::dodawanie_przyciskow_tab_r1()
 		tab_r1.attach( button_sys_r[i], 2, 3, i+1, i+2 );
 		tab_r1.attach( button_pic_r[i], 3, 4, i+1, i+2 );
 		tab_r1.attach( button_res_r[i], 4, 5, i+1, i+2 );
-	    }
+		}
 }
 
 void Rwin::dodanie_napisow_tab_r1()
@@ -81,10 +88,7 @@ void Rwin::dodanie_napisow_tab_r1()
 	    {
 	        /* Konwertujemy liczbe na lancuch znakow */
 	        char Temp[11];
-
-
 	        sprintf( Temp, "Zadanie %i", i);
-
 	        /* Ustawiamy etykiete */
 	        label_info_r[i-1].set_label( Temp );
 	    }
