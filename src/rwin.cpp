@@ -19,7 +19,7 @@ Rwin::Rwin()
 // Parametry okna.
 set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
 set_title("Learn 2015"); //tytul
-set_size_request(800,600); //rozmiar
+set_size_request(800,620); //rozmiar
 set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
 set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
@@ -56,15 +56,15 @@ void Rwin::dodanie_ikon_tab_r1()
 		for( int i = 0; i < 10; ++i )
 	    {
 		button_info_r[i].add_pixlabel("./icons/info_icon.png", "Info");
-		button_sys_r[i].add_pixlabel("./icons/search_icon.png", "System");
-		button_pic_r [i].add_pixlabel("./icons/rtg_icon.png", "Flash");
+		button_sys_r[i].add_pixlabel("./icons/search_icon.png", "Szukanie");
+		button_pic_r [i].add_pixlabel("./icons/rtg_icon.png", "Cel");
 		button_res_r[i].add_pixlabel("./icons/gear_icon.png", "Wynik");
 	    }
 }
 
 void Rwin::dodawanie_przyciskow_tab_r1()
 {
-	tab_r1.set_row_spacings(5); //odstepy pomiedzy wierszami
+	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
 	tab_r1.set_col_spacings(10); //odstepy pomiedzy kolumnami
 
 	tab_r1.attach( label_head_r, 0, 5, 0, 1 );
