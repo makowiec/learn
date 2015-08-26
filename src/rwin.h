@@ -17,13 +17,25 @@ virtual ~Rwin();
 
 protected:
 //Signal handlers:
+void dodawanie_przyciskow_zadan_tab_r1();
 void dodawanie_przyciskow_tab_r1();
 void dodanie_napisow_tab_r1();
 void dodanie_ikon_tab_r1();
+void on_button_clicked_job_r_0();
+void on_button_clicked_job_r_1();
+void on_button_clicked_job_r_2();
+void on_button_clicked_job_r_3();
+void on_button_clicked_job_r_4();
+void on_button_clicked_job_r_5();
+void on_button_clicked_job_r_6();
+void on_button_clicked_job_r_7();
+void on_button_clicked_job_r_8();
+void on_button_clicked_job_r_9();
 
 private:
 Gtk::Table tab_r1; // tabela
 Gtk::Button
+button_job_r[10], // wywolywanie zadan
 button_info_r[10], // biezaca informacja o obiekcie
 button_sys_r[10], // archiwalna informacja o obiekcie
 button_pic_r[10], // podglad obiektu w zewnetrznym programie
