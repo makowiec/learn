@@ -13,13 +13,13 @@ Description : Okno dla danych z North ;)
 #include <cstdio>
 
 Rwin::Rwin()
-: tab_r1( 12, 5, false ) // tabela 12x5
+: tab_r1( 12, 5, true ) // tabela 12x5
 
 {
 // Parametry okna.
-	set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
+	set_border_width(20); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
 	set_title("Learn 2015"); //tytul
-	set_size_request(600,620); //rozmiar
+	set_size_request(800,600); //rozmiar
 	set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
 	set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
@@ -60,19 +60,19 @@ Rwin::~Rwin()
 
 void Rwin::dodawanie_przyciskow_zadan_tab_r1()
 {
-	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
+	tab_r1.set_row_spacings(5); //odstepy pomiedzy wierszami
 	tab_r1.set_col_spacings(10); //odstepy pomiedzy kolumnami
 
 	for( int i = 0; i < 10; ++i )
 		{
 		tab_r1.attach( button_job_r[i], 0, 1, i+1, i+2 );
-		button_job_r[i].set_size_request(25,5);
+		button_job_r[i].set_size_request(0, 0);
 		}
 }
 
 void Rwin::dodawanie_przyciskow_tab_r1()
 {
-	tab_r1.set_row_spacings(10); //odstepy pomiedzy wierszami
+	tab_r1.set_row_spacings(5); //odstepy pomiedzy wierszami
 	tab_r1.set_col_spacings(10); //odstepy pomiedzy kolumnami
 
 	for( int i = 0; i < 10; ++i )
@@ -81,10 +81,10 @@ void Rwin::dodawanie_przyciskow_tab_r1()
 		tab_r1.attach( button_sys_r[i], 2, 3, i+1, i+2 );
 		tab_r1.attach( button_pic_r[i], 3, 4, i+1, i+2 );
 		tab_r1.attach( button_res_r[i], 4, 5, i+1, i+2 );
-		button_info_r[i].set_size_request(5,5);
-		button_sys_r[i].set_size_request(5,5);
-		button_pic_r[i].set_size_request(5,5);
-		button_res_r[i].set_size_request(5,5);
+		//button_info_r[i].set_size_request(30,5);
+		//button_sys_r[i].set_size_request(5,5);
+		//button_pic_r[i].set_size_request(5,5);
+		//button_res_r[i].set_size_request(5,5);
 	    }
 }
 
