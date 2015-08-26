@@ -17,29 +17,29 @@ Rwin::Rwin()
 
 {
 // Parametry okna.
-set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
-set_title("Learn 2015"); //tytul
-set_size_request(600,620); //rozmiar
-set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
-set_resizable( false ); // blokowanie zmiany rozmiaru okna
+	set_border_width(30); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
+	set_title("Learn 2015"); //tytul
+	set_size_request(600,620); //rozmiar
+	set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
+	set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
 // Tabela 1
-dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
-dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
-dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
-dodawanie_przyciskow_zadan_tab_r1(); // funkcja dodajaca przyciski zadan
+	dodawanie_przyciskow_tab_r1(); // funkcja dodajaca przyciski
+	dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
+	dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
+	dodawanie_przyciskow_zadan_tab_r1(); // funkcja dodajaca przyciski zadan
 
 // Akcja klikniecie
-button_job_r[0].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_0));
-button_job_r[1].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_1));
-button_job_r[2].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_2));
-button_job_r[3].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_3));
-button_job_r[4].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_4));
-button_job_r[5].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_5));
-button_job_r[6].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_6));
-button_job_r[7].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_7));
-button_job_r[8].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_8));
-button_job_r[9].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_9));
+	button_job_r[0].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_0));
+	button_job_r[1].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_1));
+	button_job_r[2].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_2));
+	button_job_r[3].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_3));
+	button_job_r[4].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_4));
+	button_job_r[5].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_5));
+	button_job_r[6].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_6));
+	button_job_r[7].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_7));
+	button_job_r[8].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_8));
+	button_job_r[9].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_9));
 
 
 //Wyswietlane elementy
@@ -102,7 +102,8 @@ void Rwin::dodanie_ikon_tab_r1()
 void Rwin::dodanie_napisow_tab_r1()
 {
 
-	label_head_r.set_label( "Rrr" );
+	label_head_r.set_markup( "<span size=\"x-large\">Rrr...</span>");
+
 	tab_r1.attach( label_head_r, 0, 5, 0, 1 );
 
 	for( int i = 1; i < 11; ++i )
@@ -112,6 +113,7 @@ void Rwin::dodanie_napisow_tab_r1()
 	        sprintf( Temp, "Zadanie %i", i);
 	        /* Ustawiamy etykiete */
 	        button_job_r[i-1].set_label( Temp );
+
 	    }
 }
 
