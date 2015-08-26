@@ -28,6 +28,7 @@ Rwin::Rwin()
 	dodanie_napisow_tab_r1(); // funkcja dodajaca napisy "Zadanie nr"
 	dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
 	dodawanie_przyciskow_zadan_tab_r1(); // funkcja dodajaca przyciski zadan
+	ukrywanie_przyciskow_tab_r1(); //funkcja ukrywajaca przyciski
 
 // Akcja klikniecie
 	button_job_r[0].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_0));
@@ -117,8 +118,21 @@ void Rwin::dodanie_napisow_tab_r1()
 	    }
 }
 
+void Rwin::ukrywanie_przyciskow_tab_r1()
+{
+	for( int i = 0; i < 10; ++i )
+		{
+		button_info_r[i].hide();
+		button_sys_r[i].hide();
+		button_pic_r[i].hide();
+		button_res_r[i].hide();
+		}
+}
+
+
 void Rwin::on_button_clicked_job_r_0()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[0].show();
 	button_sys_r[0].show();
 	button_pic_r[0].show();
@@ -127,6 +141,7 @@ void Rwin::on_button_clicked_job_r_0()
 
 void Rwin::on_button_clicked_job_r_1()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[1].show();
 	button_sys_r[1].show();
 	button_pic_r[1].show();
@@ -135,6 +150,7 @@ void Rwin::on_button_clicked_job_r_1()
 
 void Rwin::on_button_clicked_job_r_2()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[2].show();
 	button_sys_r[2].show();
 	button_pic_r[2].show();
@@ -143,6 +159,7 @@ void Rwin::on_button_clicked_job_r_2()
 
 void Rwin::on_button_clicked_job_r_3()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[3].show();
 	button_sys_r[3].show();
 	button_pic_r[3].show();
@@ -151,6 +168,7 @@ void Rwin::on_button_clicked_job_r_3()
 
 void Rwin::on_button_clicked_job_r_4()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[4].show();
 	button_sys_r[4].show();
 	button_pic_r[4].show();
@@ -159,6 +177,7 @@ void Rwin::on_button_clicked_job_r_4()
 
 void Rwin::on_button_clicked_job_r_5()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[5].show();
 	button_sys_r[5].show();
 	button_pic_r[5].show();
@@ -167,6 +186,7 @@ void Rwin::on_button_clicked_job_r_5()
 
 void Rwin::on_button_clicked_job_r_6()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[6].show();
 	button_sys_r[6].show();
 	button_pic_r[6].show();
@@ -175,6 +195,7 @@ void Rwin::on_button_clicked_job_r_6()
 
 void Rwin::on_button_clicked_job_r_7()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[7].show();
 	button_sys_r[7].show();
 	button_pic_r[7].show();
@@ -183,6 +204,7 @@ void Rwin::on_button_clicked_job_r_7()
 
 void Rwin::on_button_clicked_job_r_8()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[8].show();
 	button_sys_r[8].show();
 	button_pic_r[8].show();
@@ -191,6 +213,7 @@ void Rwin::on_button_clicked_job_r_8()
 
 void Rwin::on_button_clicked_job_r_9()
 {
+	Rwin::ukrywanie_przyciskow_tab_r1();
 	button_info_r[9].show();
 	button_sys_r[9].show();
 	button_pic_r[9].show();
@@ -199,10 +222,10 @@ void Rwin::on_button_clicked_job_r_9()
 
 /*void Rwin::on_button_clicked_r1()
 {
-std::cout << "Hello Pó³noc" << std::endl;
+std::cout << "Hello Pï¿½noc" << std::endl;
 }
 void Rwin::on_button_clicked_r2()
 {
-std::cout << "Hello Po³udnie" << std::endl;
+std::cout << "Hello Poï¿½udnie" << std::endl;
 }
 */

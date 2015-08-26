@@ -21,6 +21,7 @@ void dodawanie_przyciskow_zadan_tab_r1();
 void dodawanie_przyciskow_tab_r1();
 void dodanie_napisow_tab_r1();
 void dodanie_ikon_tab_r1();
+void ukrywanie_przyciskow_tab_r1();
 void on_button_clicked_job_r_0();
 void on_button_clicked_job_r_1();
 void on_button_clicked_job_r_2();
