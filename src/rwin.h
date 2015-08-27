@@ -32,6 +32,16 @@ void on_button_clicked_job_r_6();
 void on_button_clicked_job_r_7();
 void on_button_clicked_job_r_8();
 void on_button_clicked_job_r_9();
+void on_button_clicked_pic_r_0();
+void on_button_clicked_pic_r_1();
+void on_button_clicked_pic_r_2();
+void on_button_clicked_pic_r_3();
+void on_button_clicked_pic_r_4();
+void on_button_clicked_pic_r_5();
+void on_button_clicked_pic_r_6();
+void on_button_clicked_pic_r_7();
+void on_button_clicked_pic_r_8();
+void on_button_clicked_pic_r_9();
 
 private:
 Gtk::Table tab_r1; // tabela

@@ -31,6 +31,8 @@ Rwin::Rwin()
 	ukrywanie_przyciskow_tab_r1(); //funkcja ukrywajaca przyciski
 
 // Akcja klikniecie
+
+	// Przycisk Wyzwalajacy zadanie
 	button_job_r[0].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_0));
 	button_job_r[1].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_1));
 	button_job_r[2].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_2));
@@ -42,6 +44,17 @@ Rwin::Rwin()
 	button_job_r[8].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_8));
 	button_job_r[9].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_job_r_9));
 
+	// Przycisk podgladu obiektu w zewnetrznym programie
+	button_pic_r[0].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_0));
+	button_pic_r[1].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_1));
+	button_pic_r[2].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_2));
+	button_pic_r[3].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_3));
+	button_pic_r[4].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_4));
+	button_pic_r[5].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_5));
+	button_pic_r[6].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_6));
+	button_pic_r[7].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_7));
+	button_pic_r[8].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_8));
+	button_pic_r[9].signal_clicked().connect(sigc::mem_fun(*this, &Rwin::on_button_clicked_pic_r_9));
 
 //Wyswietlane elementy
 add( tab_r1 );
@@ -136,7 +149,6 @@ void Rwin::on_button_clicked_job_r_0()
 	button_info_r[0].show();
 	button_sys_r[0].show();
 	button_pic_r[0].show();
-	button_res_r[0].show();
 }
 
 void Rwin::on_button_clicked_job_r_1()
@@ -145,7 +157,6 @@ void Rwin::on_button_clicked_job_r_1()
 	button_info_r[1].show();
 	button_sys_r[1].show();
 	button_pic_r[1].show();
-	button_res_r[1].show();
 }
 
 void Rwin::on_button_clicked_job_r_2()
@@ -154,7 +165,6 @@ void Rwin::on_button_clicked_job_r_2()
 	button_info_r[2].show();
 	button_sys_r[2].show();
 	button_pic_r[2].show();
-	button_res_r[2].show();
 }
 
 void Rwin::on_button_clicked_job_r_3()
@@ -163,7 +173,6 @@ void Rwin::on_button_clicked_job_r_3()
 	button_info_r[3].show();
 	button_sys_r[3].show();
 	button_pic_r[3].show();
-	button_res_r[3].show();
 }
 
 void Rwin::on_button_clicked_job_r_4()
@@ -172,7 +181,6 @@ void Rwin::on_button_clicked_job_r_4()
 	button_info_r[4].show();
 	button_sys_r[4].show();
 	button_pic_r[4].show();
-	button_res_r[4].show();
 }
 
 void Rwin::on_button_clicked_job_r_5()
@@ -181,7 +189,6 @@ void Rwin::on_button_clicked_job_r_5()
 	button_info_r[5].show();
 	button_sys_r[5].show();
 	button_pic_r[5].show();
-	button_res_r[5].show();
 }
 
 void Rwin::on_button_clicked_job_r_6()
@@ -190,7 +197,6 @@ void Rwin::on_button_clicked_job_r_6()
 	button_info_r[6].show();
 	button_sys_r[6].show();
 	button_pic_r[6].show();
-	button_res_r[6].show();
 }
 
 void Rwin::on_button_clicked_job_r_7()
@@ -199,7 +205,6 @@ void Rwin::on_button_clicked_job_r_7()
 	button_info_r[7].show();
 	button_sys_r[7].show();
 	button_pic_r[7].show();
-	button_res_r[7].show();
 }
 
 void Rwin::on_button_clicked_job_r_8()
@@ -208,7 +213,6 @@ void Rwin::on_button_clicked_job_r_8()
 	button_info_r[8].show();
 	button_sys_r[8].show();
 	button_pic_r[8].show();
-	button_res_r[8].show();
 }
 
 void Rwin::on_button_clicked_job_r_9()
@@ -217,6 +221,55 @@ void Rwin::on_button_clicked_job_r_9()
 	button_info_r[9].show();
 	button_sys_r[9].show();
 	button_pic_r[9].show();
+}
+
+void Rwin::on_button_clicked_pic_r_0()
+{
+	button_res_r[0].show();
+}
+
+void Rwin::on_button_clicked_pic_r_1()
+{
+	button_res_r[1].show();
+}
+
+void Rwin::on_button_clicked_pic_r_2()
+{
+	button_res_r[2].show();
+}
+
+void Rwin::on_button_clicked_pic_r_3()
+{
+	button_res_r[3].show();
+}
+
+void Rwin::on_button_clicked_pic_r_4()
+{
+	button_res_r[4].show();
+}
+
+void Rwin::on_button_clicked_pic_r_5()
+{
+	button_res_r[5].show();
+}
+
+void Rwin::on_button_clicked_pic_r_6()
+{
+	button_res_r[6].show();
+}
+
+void Rwin::on_button_clicked_pic_r_7()
+{
+	button_res_r[7].show();
+}
+
+void Rwin::on_button_clicked_pic_r_8()
+{
+	button_res_r[8].show();
+}
+
+void Rwin::on_button_clicked_pic_r_9()
+{
 	button_res_r[9].show();
 }
 
