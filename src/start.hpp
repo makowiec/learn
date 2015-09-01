@@ -1,5 +1,5 @@
-#ifndef GTKMM_EXAMPLE_START_H
-#define GTKMM_EXAMPLE_START_H
+#ifndef GTKMM_EXAMPLE_START_HPP
+#define GTKMM_EXAMPLE_START_HPP
 
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
@@ -22,4 +22,4 @@ Gtk::HBox Kontener_poziomy_1; // Deklaracja obiektu listy poziomej
 Gtk::Button m_button_1, m_button_2; // Dekretacja przycisku
 };
 
-#endif // GTKMM_EXAMPLE_START_H
+#endif // GTKMM_EXAMPLE_START_HPP

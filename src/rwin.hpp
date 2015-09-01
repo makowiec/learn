@@ -1,5 +1,5 @@
-#ifndef GTKMM_EXAMPLE_RWIN_H
-#define GTKMM_EXAMPLE_RWIN_H
+#ifndef GTKMM_EXAMPLE_RWIN_HPP
+#define GTKMM_EXAMPLE_RWIN_HPP
 
 #include <gtkmm/button.h>
 #include <gtkmm/image.h>
@@ -59,4 +59,4 @@ label_head_r; // naglowek
 //image_info_r1;
 };
 
-#endif // GTKMM_EXAMPLE_RWIN_H
+#endif // GTKMM_EXAMPLE_RWIN_HPP
