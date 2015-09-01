@@ -9,6 +9,7 @@ Description : Okno dla danych z North ;)
 */
 
 #include "rwin.hpp"
+#include "lotto.hpp"
 #include <iostream>
 #include <cstdio>
 
@@ -29,6 +30,9 @@ Rwin::Rwin()
 	dodanie_ikon_tab_r1(); // funkcja dodajaca ikony do przyciskow
 	dodawanie_przyciskow_zadan_tab_r1(); // funkcja dodajaca przyciski zadan
 	ukrywanie_przyciskow_tab_r1(); //funkcja ukrywajaca przyciski
+
+// Wywolanie lotto
+	Lotto lotto;
 
 // Akcja klikniecie
 
