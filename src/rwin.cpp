@@ -8,7 +8,7 @@ Description : Okno dla danych z North ;)
 ============================================================================
 */
 
-#include "rwin.h"
+#include "rwin.hpp"
 #include <iostream>
 #include <cstdio>
 

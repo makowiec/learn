@@ -8,8 +8,8 @@ Description : G³ówne okno programu
 ============================================================================
 */
 
-#include "start.h"
-#include "rwin.h"
+#include "start.hpp"
+#include "rwin.hpp"
 #include <iostream>
 #include <gtkmm/main.h>
 
