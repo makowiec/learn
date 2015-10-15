@@ -1,6 +1,14 @@
 #ifndef GTKMM_EXAMPLE_START_HPP
 #define GTKMM_EXAMPLE_START_HPP
-
+/*
+============================================================================
+Name 		: start.hpp
+Author 		: makowiec
+Version 	: 0.1
+Copyright 	: priv
+Description : Glowne okno programu
+============================================================================
+*/
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>

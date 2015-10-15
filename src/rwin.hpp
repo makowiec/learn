@@ -1,6 +1,14 @@
 #ifndef GTKMM_EXAMPLE_RWIN_HPP
 #define GTKMM_EXAMPLE_RWIN_HPP
-
+/*
+============================================================================
+Name 		: rwin.cpp
+Author 		: makowiec
+Version 	: 0.1
+Copyright 	: priv
+Description : Okno dla danych z North ;)
+============================================================================
+*/
 #include <gtkmm/button.h>
 #include <gtkmm/image.h>
 #include <gtkmm/window.h>
@@ -32,6 +40,16 @@ void on_button_clicked_job_r_6();
 void on_button_clicked_job_r_7();
 void on_button_clicked_job_r_8();
 void on_button_clicked_job_r_9();
+void on_button_clicked_info_r_0();
+void on_button_clicked_info_r_1();
+void on_button_clicked_info_r_2();
+void on_button_clicked_info_r_3();
+void on_button_clicked_info_r_4();
+void on_button_clicked_info_r_5();
+void on_button_clicked_info_r_6();
+void on_button_clicked_info_r_7();
+void on_button_clicked_info_r_8();
+void on_button_clicked_info_r_9();
 void on_button_clicked_pic_r_0();
 void on_button_clicked_pic_r_1();
 void on_button_clicked_pic_r_2();

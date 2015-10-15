@@ -1,10 +1,10 @@
 /*
 ============================================================================
-Name : start.cpp
-Author : makowiec
-Version :
-Copyright : priv
-Description : G³ówne okno programu
+Name 		: start.cpp
+Author 		: makowiec
+Version 	: 0.1
+Copyright 	: priv
+Description : Glowne okno programu
 ============================================================================
 */
 
@@ -57,7 +57,7 @@ void Start::on_button_clicked_1()
 	Gtk::Main::run(rwin);
 
 
-//std::cout << "Hello Pó³noc" << std::endl;
+//std::cout << "Hello Pï¿½noc" << std::endl;
 }
 void Start::on_button_clicked_2()
 {

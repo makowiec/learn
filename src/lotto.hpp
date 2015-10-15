@@ -1,18 +1,18 @@
 #ifndef LOTTO_HPP
 #define LOTTO_HPP
+/*
+============================================================================
+Name 		: lotto.hpp
+Author 		: makowiec
+Version 	: 0.1
+Copyright 	: priv
+Description : losowanie bez powtorzen
+============================================================================
+*/
 
-class Lotto
-{
+#include <iostream>
 
-public:
-Lotto();
-virtual ~Lotto();
+extern int wylosowane[ 10 ];
+int lotto();
 
-protected:
-
-private:
-int main();
-};
-
-
-#endif /* LOTTO_HPP_ */
+#endif

@@ -1,32 +1,22 @@
 /*
 ============================================================================
-Name : lotto.cpp
-Author : makowiec
-Version :
-Copyright : priv
-Description : Losowaie liczb bez powtorzen
+Name 		: lotto.cpp
+Author 		: makowiec
+Version 	: 0.1
+Copyright 	: priv
+Description : losowanie bez powtorzen
 ============================================================================
 */
 
-#include "lotto.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
+#include "lotto.hpp"
+
+int wylosowane[ 10 ];
 
 
-
-Lotto::Lotto()
-{
-
-}
-
-Lotto::~Lotto()
-{
-
-}
-
-bool bezPowtorzenia ( int iLiczba, int tab[], int ile )
+bool czyBylaWylosowana( int iLiczba, int tab[], int ile )
 {
     if( ile <= 0 )
          return false;
@@ -34,39 +24,41 @@ bool bezPowtorzenia ( int iLiczba, int tab[], int ile )
     int i = 0;
     do
     {
-    	if( tab[ i ] == iLiczba )
-    	return true;
+        if( tab[ i ] == iLiczba )
+             return true;
+
         i++;
     } while( i < ile );
+
     return false;
 }
 
-int losowanie()
+int wylosuj()
 {
-    return( rand() % 20 ) + 1;
+    return( rand() % 10 ) + 1;
 }
 
-int main()
+int lotto()
 {
     srand( time( 0 ) );
-    int wylosowane[ 10 ];
+
     int wylosowanych = 0;
     do
     {
-        int liczba = losowanie();
-        if( bezPowtorzenia( liczba, wylosowane, wylosowanych ) == false )
+        int liczba = wylosuj();
+        if( czyBylaWylosowana( liczba, wylosowane, wylosowanych ) == false )
         {
             wylosowane[ wylosowanych ] = liczba;
             wylosowanych++;
-        }
+        } //if
     } while( wylosowanych < 10 );
 
-    /*wylosowanych = 0;
+    wylosowanych = 0;
     do
     {
         std::cout << wylosowane[ wylosowanych ] << std::endl;
-        wylosowanych++;
+    	wylosowanych++;
     } while( wylosowanych < 10 );
-	*/
-    //return wylosowane[ wylosowanych ];
+
+    return 0;
 }
