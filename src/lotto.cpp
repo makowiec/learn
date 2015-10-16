@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name 		: lotto.cpp
-Author 		: makowiec
+Author 		: makowiec (cpp0x.pl)
 Version 	: 0.1
 Copyright 	: priv
 Description : losowanie bez powtorzen
@@ -35,7 +35,7 @@ bool czyBylaWylosowana( int iLiczba, int tab[], int ile )
 
 int wylosuj()
 {
-    return( rand() % 10 ) + 1;
+    return( rand() % 20 ) + 1; //wielkosc puli
 }
 
 int lotto()

@@ -3,7 +3,7 @@
 /*
 ============================================================================
 Name 		: lotto.hpp
-Author 		: makowiec
+Author 		: makowiec (cpp0x.pl)
 Version 	: 0.1
 Copyright 	: priv
 Description : losowanie bez powtorzen
