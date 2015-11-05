@@ -10,6 +10,7 @@ Description : Okno dla danych z North ;)
 
 #include "rwin.hpp"
 #include "lotto.hpp"
+#include "info.hpp"
 #include <iostream>
 #include <cstdio>
 using namespace std;
@@ -21,7 +22,7 @@ Rwin::Rwin()
 // Wywolanie funkci lotto
 	lotto();
 
-// Parametry okna.
+// Parametry okna
 	set_border_width(20); //odleglosc pomiedzy obramowaniem okna, a elementami wewnatrz
 	set_title("Learn 2015"); //tytul
 	set_size_request(800,600); //rozmiar
@@ -156,8 +157,11 @@ void Rwin::ukrywanie_przyciskow_tab_r1()
 		button_res_r[i].hide();
 		}
 }
-
-
+/*
+============================================================================
+Zadanie 1
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_0()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -169,9 +173,22 @@ void Rwin::on_button_clicked_job_r_0()
 
 void Rwin::on_button_clicked_info_r_0()
 {
-	cout << wylosowane[ 0 ] <<endl ;
+	cout << wylosowane[ 0 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_0()
+{
+	button_res_r[0].show();
+}
+/*
+============================================================================
+Zadanie 2
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_1()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -182,9 +199,22 @@ void Rwin::on_button_clicked_job_r_1()
 
 void Rwin::on_button_clicked_info_r_1()
 {
-	cout << wylosowane[ 1 ] <<endl ;
+	cout << wylosowane[ 1 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_1()
+{
+	button_res_r[1].show();
+}
+/*
+============================================================================
+Zadanie 3
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_2()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -195,9 +225,22 @@ void Rwin::on_button_clicked_job_r_2()
 
 void Rwin::on_button_clicked_info_r_2()
 {
-	cout << wylosowane[ 2 ] <<endl ;
+	cout << wylosowane[ 2 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_2()
+{
+	button_res_r[2].show();
+}
+/*
+============================================================================
+Zadanie 4
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_3()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -208,9 +251,22 @@ void Rwin::on_button_clicked_job_r_3()
 
 void Rwin::on_button_clicked_info_r_3()
 {
-	cout << wylosowane[ 3 ] <<endl ;
+	cout << wylosowane[ 3 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_3()
+{
+	button_res_r[3].show();
+}
+/*
+============================================================================
+Zadanie 5
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_4()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -221,9 +277,22 @@ void Rwin::on_button_clicked_job_r_4()
 
 void Rwin::on_button_clicked_info_r_4()
 {
-	cout << wylosowane[ 4 ] <<endl ;
+	cout << wylosowane[ 4 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_4()
+{
+	button_res_r[4].show();
+}
+/*
+============================================================================
+Zadanie 6
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_5()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -234,9 +303,22 @@ void Rwin::on_button_clicked_job_r_5()
 
 void Rwin::on_button_clicked_info_r_5()
 {
-	cout << wylosowane[ 5 ] <<endl ;
+	cout << wylosowane[ 5 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_5()
+{
+	button_res_r[5].show();
+}
+/*
+============================================================================
+Zadanie 7
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_6()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -247,9 +329,22 @@ void Rwin::on_button_clicked_job_r_6()
 
 void Rwin::on_button_clicked_info_r_6()
 {
-	cout << wylosowane[ 6 ] <<endl ;
+	cout << wylosowane[ 6 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_6()
+{
+	button_res_r[6].show();
+}
+/*
+============================================================================
+Zadanie 8
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_7()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -260,9 +355,22 @@ void Rwin::on_button_clicked_job_r_7()
 
 void Rwin::on_button_clicked_info_r_7()
 {
-	cout << wylosowane[ 7 ] <<endl ;
+	cout << wylosowane[ 7 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_7()
+{
+	button_res_r[7].show();
+}
+/*
+============================================================================
+Zadanie 9
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_8()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -273,9 +381,22 @@ void Rwin::on_button_clicked_job_r_8()
 
 void Rwin::on_button_clicked_info_r_8()
 {
-	cout << wylosowane[ 8 ] <<endl ;
+	cout << wylosowane[ 8 ] <<endl;
+
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
+void Rwin::on_button_clicked_pic_r_8()
+{
+	button_res_r[8].show();
+}
+/*
+============================================================================
+Zadanie 10
+============================================================================
+*/
 void Rwin::on_button_clicked_job_r_9()
 {
 	Rwin::ukrywanie_przyciskow_tab_r1();
@@ -286,52 +407,11 @@ void Rwin::on_button_clicked_job_r_9()
 
 void Rwin::on_button_clicked_info_r_9()
 {
-	cout << wylosowane[ 9 ] <<endl ;
-}
+	cout << wylosowane[ 9 ] <<endl;
 
-void Rwin::on_button_clicked_pic_r_0()
-{
-	button_res_r[0].show();
-}
-
-void Rwin::on_button_clicked_pic_r_1()
-{
-	button_res_r[1].show();
-}
-
-void Rwin::on_button_clicked_pic_r_2()
-{
-	button_res_r[2].show();
-}
-
-void Rwin::on_button_clicked_pic_r_3()
-{
-	button_res_r[3].show();
-}
-
-void Rwin::on_button_clicked_pic_r_4()
-{
-	button_res_r[4].show();
-}
-
-void Rwin::on_button_clicked_pic_r_5()
-{
-	button_res_r[5].show();
-}
-
-void Rwin::on_button_clicked_pic_r_6()
-{
-	button_res_r[6].show();
-}
-
-void Rwin::on_button_clicked_pic_r_7()
-{
-	button_res_r[7].show();
-}
-
-void Rwin::on_button_clicked_pic_r_8()
-{
-	button_res_r[8].show();
+	//Wyswietleie okna z zadaniem
+	Info info;
+	Gtk::Main::run(info);
 }
 
 void Rwin::on_button_clicked_pic_r_9()
