@@ -21,6 +21,10 @@ public:
 Info();
 virtual ~Info();
 
+protected:
+Gtk::Image image;
+Gtk::Button buttonQuit;
+Gtk::Grid mainGrid;
 };
 
 #endif

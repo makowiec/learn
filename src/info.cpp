@@ -9,7 +9,7 @@ Description : wyswietlanie okna z opisem zadania
 */
 #include "info.hpp"
 #include <iostream>
-#include <cstdio>
+#include <gtkmm/scrolledwindow.h>
 using namespace std;
 
 Info::Info()
@@ -22,9 +22,25 @@ Info::Info()
 	set_position(Gtk::WIN_POS_CENTER); // pozyzja okna - wysrodkowana wzgledem pulpitu
 	set_resizable( false ); // blokowanie zmiany rozmiaru okna
 
+		// Load and display the image
+		image.set("./data/job_r_1/info_r_1.png");
+		mainGrid.attach(image,0,0,1,1);
+
+		// Add the Quit button
+		buttonQuit.add_label("Quit");
+//		//buttonQuit.signal_pressed().connect(sigc::mem_fun(*this,&Info::close));
+		mainGrid.attach(buttonQuit,0,2,1,1);
+
+		// Display the main grid in the main window
+		mainGrid.show_all();
+
+		// Insert the grid in the main window
+		add(mainGrid);
+
 }
 
 Info::~Info()
 {
 
 }
+
