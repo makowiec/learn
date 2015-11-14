@@ -78,10 +78,10 @@ public:
     void Onbutton_res_r9(wxCommandEvent & event);
 
     wxButton *button_job_r[10];
-    wxButton *button_info_r[10];
-    wxButton *button_sys_r[10];
-    wxButton *button_pic_r[10];
-    wxButton *button_res_r[10];
+    wxBitmapButton *button_info_r[10];
+    wxBitmapButton *button_sys_r[10];
+    wxBitmapButton *button_pic_r[10];
+    wxBitmapButton *button_res_r[10];
 
 };
 
