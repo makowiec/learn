@@ -1,0 +1,2 @@
+komendy Git:
+http://rogerdudler.github.io/git-guide/index.pl.html

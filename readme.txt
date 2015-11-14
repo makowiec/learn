@@ -1,8 +1,8 @@
-Instalacja
+Instalacja Eclipse + GTKmm
 --------------------------------------------------
 Ubuntu
- 1. Pobraæ z https://eclipse.org/ Eclipse IDE for C/C++ Developers
- 2. Rozpakowaæ w home
+ 1. PobraÄ‡ z https://eclipse.org/ Eclipse IDE for C/C++ Developers
+ 2. RozpakowaÄ‡ w home
  3. Instalacja JVM
     apt-get install openjdk-7-jdk lub sudo apt-get install openjdk-7-jre
  4. Instalacja gtkmm
@@ -19,9 +19,9 @@ Ubuntu
 12. GCC C Compiler / Miscellaneous / Other flags dodanie -mms-bitfields
 
 Windows
- 1. Pobraæ z https://eclipse.org/ Eclipse IDE for C/C++ Developers
- 2. Rozpakowaæ na C:
- 3. Instalacja JVM je¿eli nie ma
+ 1. PobraÄ‡ z https://eclipse.org/ Eclipse IDE for C/C++ Developers
+ 2. RozpakowaÄ‡ na C:
+ 3. Instalacja JVM jeÅ¼eli nie ma
  4. Instalacja mingw
  5. Instalacja gtkmm - ostatnia wersja
  6. Uruchomienie Eclipse
@@ -35,12 +35,19 @@ Windows
 12. GCC C++ Compiler / Miscellaneous / Other flags dodanie -mms-bitfields
 13. GCC C Compiler / Miscellaneous / Other flags dodanie -mms-bitfields
 
+Instalacja Code::Blocks + wxWidgets
+--------------------------------------------------
+Ubuntu
+ 1. Centrum oprogramowania Ubuntu Code::Blocks IDE
+ 2. JeÅ¼eli nie ma kompilatora - build-essential
+ 3. Instalacja bibliotek apt-get install libwxgtk2.8-dev libwxgtk2.8-dbg
+
 ToDo
 --------------------------------------------------
- 1. Losowanie 10 liczb z puli okreœlonej iloœci¹ zadañ;
+ 1. Losowanie 10 liczb z puli okreÅ›lonej iloÅ›Ä‡ zadaÅ„;
  2. Otwieranie dokumentu pdf;
- 3. Otwietanie plików graficznych;
- 4. Wczytywanie wspó³rzêdnych z plików tekstowych;
- 5. Otwieranie plikow graficznych i rysowanie figur 
- 	geometrycznych wed³ug wczytanych wspó³rzêdnych;
- 6. Dodanie narzêdzi dla plików graficznych;
+ 3. Otwietanie plikÃ³w graficznych;
+ 4. Wczytywanie wspÃ³Å‚rzÄ™dnych z plikÃ³w tekstowych;
+ 5. Otwieranie plikow graficznych i rysowanie figur
+ 	geometrycznych wedÅ‚ug wczytanych wspÃ³Å‚rzÄ™dnych;
+ 6. Dodanie narzÄ™dzi dla plikÃ³w graficznych;
