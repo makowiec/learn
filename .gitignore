@@ -1,0 +1,8 @@
+# czyszczenie: git rm -r --cached .
+/bin/
+/obj/
+learn.cbp
+learn.depend
+learn.layout
+.cproject
+.project
