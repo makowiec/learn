@@ -1,2 +1,5 @@
 komendy Git:
 http://rogerdudler.github.io/git-guide/index.pl.html
+
+instalacja Code::Blocks + wxWidgets Win
+https://www.youtube.com/watch?v=QuPiZ86EFhQ
