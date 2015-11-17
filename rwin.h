@@ -19,8 +19,6 @@ public:
 
     Rwin(const wxString& title);
 
-
-    wxButton *button_title;
     wxButton *button_logo;
     wxButton *button_info;
     wxButton *button_sys;
@@ -29,6 +27,7 @@ public:
     wxButton *button_desc;
     wxButton *button_job;
     wxButton *button_show;
+    wxStaticText *text_title;
 };
 
 #endif
