@@ -59,7 +59,6 @@ Rwin::Rwin(const wxString& title)
     button_desc = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
 
 // tworzenie przycisków zadan i zakonczenia programu
-    //button_job = new wxButton(panel_job, wxID_ANY, wxT("job"), wxPoint(0, 0), wxSize(120, 600));
     button_jobr[0] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 1"), wxPoint(20, 20), wxSize(90, 40));
     button_jobr[1] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 2"), wxPoint(20, 72), wxSize(90, 40));
     button_jobr[2] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 3"), wxPoint(20, 124), wxSize(90, 40));
@@ -76,8 +75,6 @@ Rwin::Rwin(const wxString& title)
     wxImage::AddHandler(new wxPNGHandler);
     wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
     showr = new wxStaticBitmap(panel_show, 0, bmp_show);
-
-    //button_show = new wxButton(panel_show, wxID_ANY, wxT("show"), wxPoint(0, 0), wxSize(800, 600));
 
 //akcje przyciskow
     Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quitr));

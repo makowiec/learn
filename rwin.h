@@ -19,16 +19,14 @@ public:
 
     Rwin(const wxString& title);
 
-    wxButton *button_logo;
     wxButton *button_info;
     wxButton *button_sys;
     wxButton *button_pic;
     wxButton *button_res;
     wxButton *button_desc;
-    wxButton *button_job;
-    wxButton *button_show;
     wxButton *button_jobr[10];
     wxButton *button_quitr;
+
     wxStaticBitmap* titler;
     wxStaticBitmap* logor;
     wxStaticBitmap* showr;
