@@ -41,13 +41,17 @@ Rwin::Rwin(const wxString& title)
     //panel do wyswietlania zawartosci
     wxPanel *panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
-//Tytul
+//tytul
     wxImage::AddHandler(new wxPNGHandler);
     wxBitmap bmp_title (wxT(".//image//titler.png"), wxBITMAP_TYPE_PNG);
     titler = new wxStaticBitmap(panel_title, 0, bmp_title);
 
+//logo
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_logo (wxT(".//image//logo.png"), wxBITMAP_TYPE_PNG);
+    logor = new wxStaticBitmap(panel_logo, 0, bmp_logo);
+
 // tworznie przyciskow
-    button_logo = new wxButton(panel_logo, wxID_ANY, wxT("logo"), wxPoint(0, 0), wxSize(120, 120));
     button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(0, 0), wxSize(160, 60));
     button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(0, 0), wxSize(160, 60));
     button_pic = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(0, 0), wxSize(160, 60));

@@ -28,6 +28,7 @@ public:
     wxButton *button_job;
     wxButton *button_show;
     wxStaticBitmap* titler;
+    wxStaticBitmap* logor;
 };
 
 #endif
