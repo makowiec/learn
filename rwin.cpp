@@ -51,14 +51,35 @@ Rwin::Rwin(const wxString& title)
     wxBitmap bmp_logo (wxT(".//image//logo.png"), wxBITMAP_TYPE_PNG);
     logor = new wxStaticBitmap(panel_logo, 0, bmp_logo);
 
-// tworznie przyciskow
+// tworznie przyciskow akcji
     button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(10, 10), wxSize(140, 40));
     button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(10, 10), wxSize(140, 40));
     button_pic = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(10, 10), wxSize(140, 40));
     button_res = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(10, 10), wxSize(140, 40));
     button_desc = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
-    button_job = new wxButton(panel_job, wxID_ANY, wxT("job"), wxPoint(0, 0), wxSize(120, 600));
+
+// tworzenie przycisków zadan i zakonczenia programu
+    //button_job = new wxButton(panel_job, wxID_ANY, wxT("job"), wxPoint(0, 0), wxSize(120, 600));
+    button_jobr[0] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 1"), wxPoint(20, 20), wxSize(90, 40));
+    button_jobr[1] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 2"), wxPoint(20, 72), wxSize(90, 40));
+    button_jobr[2] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 3"), wxPoint(20, 124), wxSize(90, 40));
+    button_jobr[3] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 4"), wxPoint(20, 176), wxSize(90, 40));
+    button_jobr[4] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 5"), wxPoint(20, 228), wxSize(90, 40));
+    button_jobr[5] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 6"), wxPoint(20, 280), wxSize(90, 40));
+    button_jobr[6] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 7"), wxPoint(20, 332), wxSize(90, 40));
+    button_jobr[7] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 8"), wxPoint(20, 384), wxSize(90, 40));
+    button_jobr[8] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 9"), wxPoint(20, 436), wxSize(90, 40));
+    button_jobr[9] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 10"), wxPoint(20, 488), wxSize(90, 40));
+    button_quitr = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
+
     button_show = new wxButton(panel_show, wxID_ANY, wxT("show"), wxPoint(0, 0), wxSize(800, 600));
 
-
+//akcje przyciskow
+    Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quitr));
 }
+
+// Fukncja przycisku koniec
+    void Rwin::quitr(wxCommandEvent & WXUNUSED(event))
+    {
+        Close(true);
+    }

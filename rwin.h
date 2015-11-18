@@ -27,8 +27,12 @@ public:
     wxButton *button_desc;
     wxButton *button_job;
     wxButton *button_show;
+    wxButton *button_jobr[10];
+    wxButton *button_quitr;
     wxStaticBitmap* titler;
     wxStaticBitmap* logor;
+
+    void quitr(wxCommandEvent & event);
 };
 
 #endif
