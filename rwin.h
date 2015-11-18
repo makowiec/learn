@@ -31,6 +31,7 @@ public:
     wxButton *button_quitr;
     wxStaticBitmap* titler;
     wxStaticBitmap* logor;
+    wxStaticBitmap* showr;
 
     void quitr(wxCommandEvent & event);
 };

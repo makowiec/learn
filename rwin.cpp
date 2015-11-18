@@ -24,21 +24,21 @@ Rwin::Rwin(const wxString& title)
     Centre();
 
 // tworzenie panelu
-    //panel glowny
+//panel glowny
     wxPanel *panel_r = new wxPanel(this, wxID_ANY);
-    //panel tytulu
+//panel tytulu
     wxPanel *panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
-    //panel czynnosci
+//panel czynnosci
     wxPanel *panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
     wxPanel *panel_sys = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
     wxPanel *panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
     wxPanel *panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
     wxPanel *panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(640, 60), wxSize(160, 60));
-    //panel loga
+//panel loga
     wxPanel *panel_logo = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 0), wxSize(120, 120));
-    //panel zadan
+//panel zadan
     wxPanel *panel_job = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 120), wxSize(120, 600));
-    //panel do wyswietlania zawartosci
+//panel do wyswietlania zawartosci
     wxPanel *panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
 //tytul
@@ -72,7 +72,12 @@ Rwin::Rwin(const wxString& title)
     button_jobr[9] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 10"), wxPoint(20, 488), wxSize(90, 40));
     button_quitr = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
 
-    button_show = new wxButton(panel_show, wxID_ANY, wxT("show"), wxPoint(0, 0), wxSize(800, 600));
+// strona startowa
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    showr = new wxStaticBitmap(panel_show, 0, bmp_show);
+
+    //button_show = new wxButton(panel_show, wxID_ANY, wxT("show"), wxPoint(0, 0), wxSize(800, 600));
 
 //akcje przyciskow
     Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quitr));
