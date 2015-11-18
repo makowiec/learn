@@ -27,7 +27,7 @@ public:
     wxButton *button_desc;
     wxButton *button_job;
     wxButton *button_show;
-    wxStaticText *text_title;
+    wxStaticBitmap* titler;
 };
 
 #endif

@@ -27,7 +27,7 @@ Rwin::Rwin(const wxString& title)
     //panel glowny
     wxPanel *panel_r = new wxPanel(this, wxID_ANY);
     //panel tytulu
-     wxPanel *panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
+    wxPanel *panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
     //panel czynnosci
     wxPanel *panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
     wxPanel *panel_sys = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
@@ -41,11 +41,12 @@ Rwin::Rwin(const wxString& title)
     //panel do wyswietlania zawartosci
     wxPanel *panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
-//napis na gorze okna
-    wxString  text = wxT("\n\Rrrr.");
-    text_title = new wxStaticText(panel_title, wxID_ANY, text, wxPoint(0, 0), wxSize(800, 60), wxALIGN_CENTRE );
+//Tytul
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_title (wxT(".//image//titler.png"), wxBITMAP_TYPE_PNG);
+    titler = new wxStaticBitmap(panel_title, 0, bmp_title);
 
-// tworznie przycisków
+// tworznie przyciskow
     button_logo = new wxButton(panel_logo, wxID_ANY, wxT("logo"), wxPoint(0, 0), wxSize(120, 120));
     button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(0, 0), wxSize(160, 60));
     button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(0, 0), wxSize(160, 60));
