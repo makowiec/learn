@@ -44,44 +44,138 @@ Rwin::Rwin(const wxString& title)
 //tytul
     wxImage::AddHandler(new wxPNGHandler);
     wxBitmap bmp_title (wxT(".//image//titler.png"), wxBITMAP_TYPE_PNG);
-    titler = new wxStaticBitmap(panel_title, 0, bmp_title);
+    title_r = new wxStaticBitmap(panel_title, 0, bmp_title);
 
 //logo
     wxImage::AddHandler(new wxPNGHandler);
     wxBitmap bmp_logo (wxT(".//image//logo.png"), wxBITMAP_TYPE_PNG);
-    logor = new wxStaticBitmap(panel_logo, 0, bmp_logo);
+    logo_r = new wxStaticBitmap(panel_logo, 0, bmp_logo);
 
 // tworznie przyciskow akcji
-    button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(10, 10), wxSize(140, 40));
-    button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(10, 10), wxSize(140, 40));
-    button_pic = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(10, 10), wxSize(140, 40));
-    button_res = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(10, 10), wxSize(140, 40));
-    button_desc = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
+    button_info_r = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(10, 10), wxSize(140, 40));
+    button_sys_r = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(10, 10), wxSize(140, 40));
+    button_pic_r = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(10, 10), wxSize(140, 40));
+    button_res_r = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(10, 10), wxSize(140, 40));
+    button_desc_r = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
 
 // tworzenie przycisków zadan i zakonczenia programu
-    button_jobr[0] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 1"), wxPoint(20, 20), wxSize(90, 40));
-    button_jobr[1] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 2"), wxPoint(20, 72), wxSize(90, 40));
-    button_jobr[2] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 3"), wxPoint(20, 124), wxSize(90, 40));
-    button_jobr[3] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 4"), wxPoint(20, 176), wxSize(90, 40));
-    button_jobr[4] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 5"), wxPoint(20, 228), wxSize(90, 40));
-    button_jobr[5] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 6"), wxPoint(20, 280), wxSize(90, 40));
-    button_jobr[6] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 7"), wxPoint(20, 332), wxSize(90, 40));
-    button_jobr[7] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 8"), wxPoint(20, 384), wxSize(90, 40));
-    button_jobr[8] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 9"), wxPoint(20, 436), wxSize(90, 40));
-    button_jobr[9] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 10"), wxPoint(20, 488), wxSize(90, 40));
-    button_quitr = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
+    button_job_r[0] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 1"), wxPoint(20, 20), wxSize(90, 40));
+    button_job_r[1] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 2"), wxPoint(20, 72), wxSize(90, 40));
+    button_job_r[2] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 3"), wxPoint(20, 124), wxSize(90, 40));
+    button_job_r[3] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 4"), wxPoint(20, 176), wxSize(90, 40));
+    button_job_r[4] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 5"), wxPoint(20, 228), wxSize(90, 40));
+    button_job_r[5] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 6"), wxPoint(20, 280), wxSize(90, 40));
+    button_job_r[6] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 7"), wxPoint(20, 332), wxSize(90, 40));
+    button_job_r[7] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 8"), wxPoint(20, 384), wxSize(90, 40));
+    button_job_r[8] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 9"), wxPoint(20, 436), wxSize(90, 40));
+    button_job_r[9] = new wxButton(panel_job, wxID_ANY, wxT("Zadanie 10"), wxPoint(20, 488), wxSize(90, 40));
+    button_quit_r = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
 
 // strona startowa
-    wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
-    showr = new wxStaticBitmap(panel_show, 0, bmp_show);
+    //wxImage::AddHandler(new wxPNGHandler);
+    //wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
 
 //akcje przyciskow
-    Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quitr));
+    Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quit_r));
+    button_job_r[0] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r0));
+    button_job_r[1] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r1));
+    button_job_r[2] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r2));
+    button_job_r[3] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r3));
+    button_job_r[4] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r4));
+    button_job_r[5] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r5));
+    button_job_r[6] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r6));
+    button_job_r[7] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r7));
+    button_job_r[8] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r8));
+    button_job_r[9] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r9));
 }
-
-// Fukncja przycisku koniec
-    void Rwin::quitr(wxCommandEvent & WXUNUSED(event))
+/*
+--------------------------------------------------
+Koniec
+--------------------------------------------------
+*/
+    void Rwin::quit_r(wxCommandEvent & WXUNUSED(event))
     {
         Close(true);
     }
+/*
+--------------------------------------------------
+Zadanie 1
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
+{
+}
+
+/*
+--------------------------------------------------
+Zadanie 2
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 3
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 4
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 5
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 6
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 7
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 8
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 9
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Zadanie 10
+--------------------------------------------------
+*/
+void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
+{
+}
