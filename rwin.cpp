@@ -52,11 +52,11 @@ Rwin::Rwin(const wxString& title)
     logor = new wxStaticBitmap(panel_logo, 0, bmp_logo);
 
 // tworznie przyciskow
-    button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(0, 0), wxSize(160, 60));
-    button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(0, 0), wxSize(160, 60));
-    button_pic = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(0, 0), wxSize(160, 60));
-    button_res = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(0, 0), wxSize(160, 60));
-    button_desc = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(0, 0), wxSize(160, 60));
+    button_info = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(10, 10), wxSize(140, 40));
+    button_sys = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(10, 10), wxSize(140, 40));
+    button_pic = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(10, 10), wxSize(140, 40));
+    button_res = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(10, 10), wxSize(140, 40));
+    button_desc = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
     button_job = new wxButton(panel_job, wxID_ANY, wxT("job"), wxPoint(0, 0), wxSize(120, 600));
     button_show = new wxButton(panel_show, wxID_ANY, wxT("show"), wxPoint(0, 0), wxSize(800, 600));
 
