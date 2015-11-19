@@ -30,7 +30,6 @@ public:
     wxStaticBitmap* title_r;
     wxStaticBitmap* logo_r;
     wxStaticBitmap* show_r;
-    wxStaticBitmap* button_job0_r;
 
     wxPanel *panel_r;
     wxPanel *panel_title;

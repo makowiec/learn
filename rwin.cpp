@@ -248,6 +248,11 @@ Res
 */
 void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 {
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -256,7 +261,11 @@ Desc
 */
 void Rwin::Onbutton_desc_r(wxCommandEvent & WXUNUSED(event))
 {
-
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//logo.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
