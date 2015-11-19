@@ -16,6 +16,8 @@ Rwin::Rwin(const wxString& title)
     : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(936, 758))
 {
 
+    job_number=0;
+
 // blokowanie rozmiaru okna
     SetMinSize(GetSize());
     SetMaxSize(GetSize());
@@ -118,6 +120,13 @@ Zadanie 1
 */
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
+
+job_number = 1;
+
+wxString Foobar;
+Foobar.Printf( wxT("Numer zadania %d."), job_number);
+wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -300,6 +309,12 @@ Info
 */
 void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 {
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//data//1//info_1.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
+
     panel_sys -> Show();
 }
 /*
@@ -309,6 +324,12 @@ Sys
 */
 void Rwin::Onbutton_sys_r(wxCommandEvent & WXUNUSED(event))
 {
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//data//1//sys_1.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
+
     panel_pic -> Show();
 }
 /*

@@ -19,6 +19,8 @@ public:
 
     Rwin(const wxString& title);
 
+    int job_number;
+
     wxButton *button_info_r;
     wxButton *button_sys_r;
     wxButton *button_pic_r;
