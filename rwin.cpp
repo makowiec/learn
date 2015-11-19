@@ -118,8 +118,16 @@ Zadanie 1
 */
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_1.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 
 /*
@@ -129,8 +137,16 @@ Zadanie 2
 */
 void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_2.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 
 /*
@@ -140,8 +156,16 @@ Zadanie 3
 */
 void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_3.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -150,8 +174,16 @@ Zadanie 4
 */
 void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_4.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -160,8 +192,16 @@ Zadanie 5
 */
 void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_5.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -170,8 +210,16 @@ Zadanie 6
 */
 void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_6.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -180,8 +228,16 @@ Zadanie 7
 */
 void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_7.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -190,8 +246,16 @@ Zadanie 8
 */
 void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_8.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -200,8 +264,16 @@ Zadanie 9
 */
 void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_9.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -210,8 +282,16 @@ Zadanie 10
 */
 void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 {
+//ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
+
+//zmiana obrazka na panel_show
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//job_10.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
 }
 /*
 --------------------------------------------------
