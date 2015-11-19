@@ -25,21 +25,21 @@ Rwin::Rwin(const wxString& title)
 
 // tworzenie panelu
 //panel glowny
-    wxPanel *panel_r = new wxPanel(this, wxID_ANY);
+    panel_r = new wxPanel(this, wxID_ANY);
 //panel tytulu
-    wxPanel *panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
+    panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
 //panel czynnosci
-    wxPanel *panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
-    wxPanel *panel_sys = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
-    wxPanel *panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
-    wxPanel *panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
-    wxPanel *panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(640, 60), wxSize(160, 60));
+    panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
+    panel_sys = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
+    panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
+    panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
+    panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(640, 60), wxSize(160, 60));
 //panel loga
-    wxPanel *panel_logo = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 0), wxSize(120, 120));
+    panel_logo = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 0), wxSize(120, 120));
 //panel zadan
-    wxPanel *panel_job = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 120), wxSize(120, 600));
+    panel_job = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 120), wxSize(120, 600));
 //panel do wyswietlania zawartosci
-    wxPanel *panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
+    panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
 //tytul
     wxImage::AddHandler(new wxPNGHandler);
@@ -72,22 +72,35 @@ Rwin::Rwin(const wxString& title)
     button_quit_r = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
 
 // strona startowa
-    //wxImage::AddHandler(new wxPNGHandler);
-    //wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
-    //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
 
 //akcje przyciskow
     Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quit_r));
-    button_job_r[0] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r0));
-    button_job_r[1] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r1));
-    button_job_r[2] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r2));
-    button_job_r[3] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r3));
-    button_job_r[4] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r4));
-    button_job_r[5] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r5));
-    button_job_r[6] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r6));
-    button_job_r[7] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r7));
-    button_job_r[8] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r8));
-    button_job_r[9] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r9));
+    button_job_r[0] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r0), NULL, this);
+    button_job_r[1] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r1), NULL, this);
+    button_job_r[2] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r2), NULL, this);
+    button_job_r[3] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r3), NULL, this);
+    button_job_r[4] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r4), NULL, this);
+    button_job_r[5] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r5), NULL, this);
+    button_job_r[6] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r6), NULL, this);
+    button_job_r[7] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r7), NULL, this);
+    button_job_r[8] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r8), NULL, this);
+    button_job_r[9] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r9), NULL, this);
+
+    button_info_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_info_r), NULL, this);
+    button_sys_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_sys_r), NULL, this);
+    button_pic_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_pic_r), NULL, this);
+    button_res_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_res_r), NULL, this);
+    button_desc_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_desc_r), NULL, this);
+
+//Ukrywanie przycskow czynnosci
+    panel_info -> Hide();
+    panel_sys -> Hide();
+    panel_pic -> Hide();
+    panel_res -> Hide();
+    panel_desc -> Hide();
 }
 /*
 --------------------------------------------------
@@ -105,6 +118,8 @@ Zadanie 1
 */
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 
 /*
@@ -114,7 +129,10 @@ Zadanie 2
 */
 void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
+
 /*
 --------------------------------------------------
 Zadanie 3
@@ -122,6 +140,8 @@ Zadanie 3
 */
 void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -130,6 +150,8 @@ Zadanie 4
 */
 void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -138,6 +160,8 @@ Zadanie 5
 */
 void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -146,6 +170,8 @@ Zadanie 6
 */
 void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -154,6 +180,8 @@ Zadanie 7
 */
 void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -162,6 +190,8 @@ Zadanie 8
 */
 void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -170,6 +200,8 @@ Zadanie 9
 */
 void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
 }
 /*
 --------------------------------------------------
@@ -178,4 +210,64 @@ Zadanie 10
 */
 void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 {
+    Rwin::button_hide_r();
+    panel_info -> Show();
+}
+/*
+--------------------------------------------------
+Info
+--------------------------------------------------
+*/
+void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
+{
+    panel_sys -> Show();
+}
+/*
+--------------------------------------------------
+Sys
+--------------------------------------------------
+*/
+void Rwin::Onbutton_sys_r(wxCommandEvent & WXUNUSED(event))
+{
+    panel_pic -> Show();
+}
+/*
+--------------------------------------------------
+Pic
+--------------------------------------------------
+*/
+void Rwin::Onbutton_pic_r(wxCommandEvent & WXUNUSED(event))
+{
+    panel_res -> Show();
+    panel_desc -> Show();
+}
+/*
+--------------------------------------------------
+Res
+--------------------------------------------------
+*/
+void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
+{
+}
+/*
+--------------------------------------------------
+Desc
+--------------------------------------------------
+*/
+void Rwin::Onbutton_desc_r(wxCommandEvent & WXUNUSED(event))
+{
+
+}
+/*
+--------------------------------------------------
+Ukrywanie przyciskow czynnosci
+--------------------------------------------------
+*/
+void Rwin::button_hide_r()
+{
+    panel_info -> Hide();
+    panel_sys -> Hide();
+    panel_pic -> Hide();
+    panel_res -> Hide();
+    panel_desc -> Hide();
 }
