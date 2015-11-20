@@ -38,9 +38,9 @@ Rwin::Rwin(const wxString& title)
     panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
 //panel czynnosci
     panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
-    panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
-    panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
-    panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(640, 60), wxSize(160, 60));
+    panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
+    panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
+    panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
 //panel loga
     panel_logo = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 0), wxSize(120, 120));
 //panel zadan
