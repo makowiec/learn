@@ -38,7 +38,6 @@ Rwin::Rwin(const wxString& title)
     panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
 //panel czynnosci
     panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
-    panel_sys = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
     panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
     panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(480, 60), wxSize(160, 60));
     panel_desc = new wxPanel(panel_r, wxID_ANY, wxPoint(640, 60), wxSize(160, 60));
@@ -61,7 +60,6 @@ Rwin::Rwin(const wxString& title)
 
 // tworznie przyciskow akcji
     button_info_r = new wxButton(panel_info, wxID_ANY, wxT("info"), wxPoint(10, 10), wxSize(140, 40));
-    button_sys_r = new wxButton(panel_sys, wxID_ANY, wxT("sys"), wxPoint(10, 10), wxSize(140, 40));
     button_pic_r = new wxButton(panel_pic, wxID_ANY, wxT("pic"), wxPoint(10, 10), wxSize(140, 40));
     button_res_r = new wxButton(panel_res, wxID_ANY, wxT("res"), wxPoint(10, 10), wxSize(140, 40));
     button_desc_r = new wxButton(panel_desc, wxID_ANY, wxT("desc"), wxPoint(10, 10), wxSize(140, 40));
@@ -101,14 +99,12 @@ Rwin::Rwin(const wxString& title)
     button_job_r[9] -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_job_r9), NULL, this);
 
     button_info_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_info_r), NULL, this);
-    button_sys_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_sys_r), NULL, this);
     button_pic_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_pic_r), NULL, this);
     button_res_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_res_r), NULL, this);
     button_desc_r -> Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::Onbutton_desc_r), NULL, this);
 
 //Ukrywanie przycskow czynnosci
     panel_info -> Hide();
-    panel_sys -> Hide();
     panel_pic -> Hide();
     panel_res -> Hide();
     panel_desc -> Hide();
@@ -377,21 +373,6 @@ void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
 
-    panel_sys -> Show();
-}
-/*
---------------------------------------------------
-Sys
---------------------------------------------------
-*/
-void Rwin::Onbutton_sys_r(wxCommandEvent & WXUNUSED(event))
-{
-    wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//data//1//sys_1.png"), wxBITMAP_TYPE_PNG);
-    show_r -> Destroy();
-    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
-    show_r -> Update();
-
     panel_pic -> Show();
 }
 /*
@@ -438,7 +419,6 @@ Ukrywanie przyciskow czynnosci
 void Rwin::button_hide_r()
 {
     panel_info -> Hide();
-    panel_sys -> Hide();
     panel_pic -> Hide();
     panel_res -> Hide();
     panel_desc -> Hide();

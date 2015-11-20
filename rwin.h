@@ -23,7 +23,6 @@ public:
     int job_number;
 
     wxButton *button_info_r;
-    wxButton *button_sys_r;
     wxButton *button_pic_r;
     wxButton *button_res_r;
     wxButton *button_desc_r;
@@ -37,7 +36,6 @@ public:
     wxPanel *panel_r;
     wxPanel *panel_title;
     wxPanel *panel_info;
-    wxPanel *panel_sys;
     wxPanel *panel_pic;
     wxPanel *panel_res;
     wxPanel *panel_desc;
@@ -58,7 +56,6 @@ public:
     void Onbutton_job_r8(wxCommandEvent & event);
     void Onbutton_job_r9(wxCommandEvent & event);
     void Onbutton_info_r(wxCommandEvent & event);
-    void Onbutton_sys_r(wxCommandEvent & event);
     void Onbutton_pic_r(wxCommandEvent & event);
     void Onbutton_res_r(wxCommandEvent & event);
     void Onbutton_desc_r(wxCommandEvent & event);
