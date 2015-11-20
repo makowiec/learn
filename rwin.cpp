@@ -313,7 +313,7 @@ Info
 void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 {
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//data//1//info_1.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_10//png//info_1.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
