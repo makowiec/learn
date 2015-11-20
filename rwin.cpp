@@ -9,14 +9,20 @@ Description : Okno dla danych z North ;)
 */
 
 #include "rwin.h"
+#include "lotto.hpp"
 #include <iostream>
 #include <cstdio>
+
+using namespace std;
 
 Rwin::Rwin(const wxString& title)
     : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(936, 758))
 {
 
     job_number=0;
+
+// wywolanie lotto
+    lotto();
 
 // blokowanie rozmiaru okna
     SetMinSize(GetSize());
@@ -123,12 +129,11 @@ Zadanie 1
 */
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
-
-//job_number = 1;
-
-//wxString Foobar;
-//Foobar.Printf( wxT("Numer zadania %d."), job_number);
-//wxMessageBox(Foobar);
+//okno serwisowe
+    job_number = draw_now[ 0 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
@@ -149,6 +154,12 @@ Zadanie 2
 */
 void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 1 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -168,6 +179,12 @@ Zadanie 3
 */
 void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 2 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -186,6 +203,12 @@ Zadanie 4
 */
 void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 3 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -204,6 +227,12 @@ Zadanie 5
 */
 void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 4 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -222,6 +251,12 @@ Zadanie 6
 */
 void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 5 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -240,6 +275,12 @@ Zadanie 7
 */
 void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 6 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -258,6 +299,12 @@ Zadanie 8
 */
 void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 7 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -276,6 +323,12 @@ Zadanie 9
 */
 void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 8 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -294,6 +347,12 @@ Zadanie 10
 */
 void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 {
+//okno serwisowe
+    job_number = draw_now[ 9 ];
+    wxString Foobar;
+    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    wxMessageBox(Foobar);
+
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
     panel_info -> Show();
@@ -313,7 +372,7 @@ Info
 void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 {
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//data//sample_10//png//info_1.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_1//png//info_1.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
