@@ -20,7 +20,17 @@ public:
 
     Rwin(const wxString& title);
 
-    int job_number;
+    int job_number_r;
+    int but_job_0_r;
+    int but_job_1_r;
+    int but_job_2_r;
+    int but_job_3_r;
+    int but_job_4_r;
+    int but_job_5_r;
+    int but_job_6_r;
+    int but_job_7_r;
+    int but_job_8_r;
+    int but_job_9_r;
 
     wxButton *button_info_r;
     wxButton *button_pic_r;
@@ -59,6 +69,7 @@ public:
     void Onbutton_pic_r(wxCommandEvent & event);
     void Onbutton_res_r(wxCommandEvent & event);
     void Onbutton_desc_r(wxCommandEvent & event);
+    void button_job_disable_r();
     void button_hide_r();
 
     wxHtmlWindow *HtmlWindow1;

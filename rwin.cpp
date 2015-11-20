@@ -18,8 +18,20 @@ using namespace std;
 Rwin::Rwin(const wxString& title)
     : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(936, 758))
 {
-
-    job_number=0;
+//zmienne
+    //aktualny numer zadania
+    job_number_r=0;
+    //stan przycisku job
+    but_job_0_r = 0;
+    but_job_1_r = 0;
+    but_job_2_r = 0;
+    but_job_3_r = 0;
+    but_job_4_r = 0;
+    but_job_5_r = 0;
+    but_job_6_r = 0;
+    but_job_7_r = 0;
+    but_job_8_r = 0;
+    but_job_9_r = 0;
 
 // wywolanie lotto
     lotto();
@@ -126,9 +138,9 @@ Zadanie 1
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 0 ];
+    job_number_r = draw_now[ 0 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -141,6 +153,12 @@ void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_0_r = 1;
 }
 
 /*
@@ -151,9 +169,9 @@ Zadanie 2
 void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 1 ];
+    job_number_r = draw_now[ 1 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -166,6 +184,12 @@ void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_1_r = 1;
 }
 
 /*
@@ -176,9 +200,9 @@ Zadanie 3
 void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 2 ];
+    job_number_r = draw_now[ 2 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -191,6 +215,12 @@ void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_2_r = 1;
 }
 /*
 --------------------------------------------------
@@ -200,9 +230,9 @@ Zadanie 4
 void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 3 ];
+    job_number_r = draw_now[ 3 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -215,6 +245,12 @@ void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_3_r = 1;
 }
 /*
 --------------------------------------------------
@@ -224,9 +260,9 @@ Zadanie 5
 void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 4 ];
+    job_number_r = draw_now[ 4 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -239,6 +275,12 @@ void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_4_r = 1;
 }
 /*
 --------------------------------------------------
@@ -248,9 +290,9 @@ Zadanie 6
 void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 5 ];
+    job_number_r = draw_now[ 5 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -263,6 +305,12 @@ void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_5_r = 1;
 }
 /*
 --------------------------------------------------
@@ -272,9 +320,9 @@ Zadanie 7
 void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 6 ];
+    job_number_r = draw_now[ 6 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -287,6 +335,12 @@ void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_6_r = 1;
 }
 /*
 --------------------------------------------------
@@ -296,9 +350,9 @@ Zadanie 8
 void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 7 ];
+    job_number_r = draw_now[ 7 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -311,6 +365,12 @@ void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_7_r = 1;
 }
 /*
 --------------------------------------------------
@@ -320,9 +380,9 @@ Zadanie 9
 void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 8 ];
+    job_number_r = draw_now[ 8 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -335,6 +395,12 @@ void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_8_r = 1;
 }
 /*
 --------------------------------------------------
@@ -344,9 +410,9 @@ Zadanie 10
 void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 {
 //okno serwisowe
-    job_number = draw_now[ 9 ];
+    job_number_r = draw_now[ 9 ];
     wxString Foobar;
-    Foobar.Printf( wxT("Numer zadania %d."), job_number);
+    Foobar.Printf( wxT("Numer zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
@@ -359,6 +425,12 @@ void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
+
+//funkcja ukrywajaca przyciski zadan wykonanych
+    Rwin::button_job_disable_r();
+
+//zmiana stanu przycisku
+    but_job_9_r = 1;
 }
 /*
 --------------------------------------------------
@@ -422,4 +494,62 @@ void Rwin::button_hide_r()
     panel_pic -> Hide();
     panel_res -> Hide();
     panel_desc -> Hide();
+}
+/*
+--------------------------------------------------
+Ukrywanie przyciskow zadan
+--------------------------------------------------
+*/
+void Rwin::button_job_disable_r()
+{
+    if (but_job_0_r = 1)
+    {
+        button_job_r[0] -> Disable();
+    }
+
+    if (but_job_1_r = 1)
+    {
+        button_job_r[1] -> Disable();
+    }
+
+    if (but_job_2_r = 1)
+    {
+        button_job_r[2] -> Disable();
+    }
+
+    if (but_job_3_r = 1)
+    {
+        button_job_r[3] -> Disable();
+    }
+
+    if (but_job_4_r = 1)
+    {
+        button_job_r[4] -> Disable();
+    }
+
+    if (but_job_5_r = 1)
+    {
+        button_job_r[5] -> Disable();
+    }
+
+    if (but_job_6_r = 1)
+    {
+        button_job_r[6] -> Disable();
+    }
+
+    if (but_job_7_r = 1)
+    {
+        button_job_r[7] -> Disable();
+    }
+
+    if (but_job_8_r = 1)
+    {
+        button_job_r[8] -> Disable();
+    }
+
+    if but_job_9_r = 1
+    {
+        button_job_r[9] -> Disable();
+    }
+
 }
