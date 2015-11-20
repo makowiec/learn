@@ -74,12 +74,12 @@ Rwin::Rwin(const wxString& title)
     button_quit_r = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
 
 // strona startowa
-    //wxImage::AddHandler(new wxPNGHandler);
-    //wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
-    //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
-    panel_show_h = new wxPanel(panel_show, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
-    HtmlWindow1 = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
-    HtmlWindow1->LoadPage(_("data\\sample_1\\html\\task1.html"));
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    //panel_show_h = new wxPanel(panel_show, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
+    //HtmlWindow1 = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
+    //HtmlWindow1->LoadPage(_("data\\sample_1\\html\\task1.html"));
 
 //akcje przyciskow
     Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quit_r));
@@ -124,11 +124,11 @@ Zadanie 1
 void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
 
-job_number = 1;
+//job_number = 1;
 
-wxString Foobar;
-Foobar.Printf( wxT("Numer zadania %d."), job_number);
-wxMessageBox(Foobar);
+//wxString Foobar;
+//Foobar.Printf( wxT("Numer zadania %d."), job_number);
+//wxMessageBox(Foobar);
 
 //ukrywanie i wyswietlanie przyciskow
     Rwin::button_hide_r();
@@ -136,7 +136,7 @@ wxMessageBox(Foobar);
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_1.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_1//png//job_1.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -155,7 +155,7 @@ void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_2.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_2//png//job_2.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -174,7 +174,7 @@ void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_3.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_3//png//job_3.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -192,7 +192,7 @@ void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_4.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_4//png//job_4.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -210,7 +210,7 @@ void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_5.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_5//png//job_5.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -228,7 +228,7 @@ void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_6.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_6//png//job_6.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -246,7 +246,7 @@ void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_7.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_7//png//job_7.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -264,7 +264,7 @@ void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_8.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_8//png//job_8.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -282,7 +282,7 @@ void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_9.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_9//png//job_9.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
@@ -300,7 +300,7 @@ void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 
 //zmiana obrazka na panel_show
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//job_10.png"), wxBITMAP_TYPE_PNG);
+    wxBitmap bmp_show (wxT(".//data//sample_10//png//job_10.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
     show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     show_r -> Update();
