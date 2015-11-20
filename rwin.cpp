@@ -74,9 +74,12 @@ Rwin::Rwin(const wxString& title)
     button_quit_r = new wxButton(panel_job, wxID_EXIT, wxT("Koniec"), wxPoint(20, 540), wxSize(90, 40));
 
 // strona startowa
-    wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
-    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    //wxImage::AddHandler(new wxPNGHandler);
+    //wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    panel_show_h = new wxPanel(panel_show, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
+    HtmlWindow1 = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
+    HtmlWindow1->LoadPage(_("data\\sample_1\\html\\task1.html"));
 
 //akcje przyciskow
     Connect(wxID_EXIT, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(Rwin::quit_r));
