@@ -12,6 +12,7 @@ Description : Okno dla danych z North ;)
 #include "lotto.hpp"
 #include <iostream>
 #include <cstdio>
+#include <fstream>
 
 using namespace std;
 
@@ -502,54 +503,13 @@ Ukrywanie przyciskow zadan
 */
 void Rwin::button_job_disable_r()
 {
-    if (but_job_0_r = 1)
-    {
-        button_job_r[0] -> Disable();
-    }
 
-    if (but_job_1_r = 1)
-    {
-        button_job_r[1] -> Disable();
-    }
+    fstream file("file_name.txt");
 
-    if (but_job_2_r = 1)
-    {
-        button_job_r[2] -> Disable();
-    }
-
-    if (but_job_3_r = 1)
-    {
-        button_job_r[3] -> Disable();
-    }
-
-    if (but_job_4_r = 1)
-    {
-        button_job_r[4] -> Disable();
-    }
-
-    if (but_job_5_r = 1)
-    {
-        button_job_r[5] -> Disable();
-    }
-
-    if (but_job_6_r = 1)
-    {
-        button_job_r[6] -> Disable();
-    }
-
-    if (but_job_7_r = 1)
-    {
-        button_job_r[7] -> Disable();
-    }
-
-    if (but_job_8_r = 1)
-    {
-        button_job_r[8] -> Disable();
-    }
-
-    if but_job_9_r = 1
-    {
-        button_job_r[9] -> Disable();
-    }
+if (file.good())
+{
+    button_job_r[0] -> Disable();
+    panel_pic -> Disable();
+}
 
 }
