@@ -39,10 +39,10 @@ public:
     wxButton *button_job_r[10];
     wxButton *button_quit_r;
 
-    wxStaticBitmap* title_r;
-    wxStaticBitmap* logo_r;
-    wxStaticBitmap* show_r;
-    wxHtmlWindow* html_r;
+    wxStaticBitmap *title_r;
+    wxStaticBitmap *logo_r;
+    wxStaticBitmap *show_r;
+    wxHtmlWindow *html_r;
 
     wxPanel *panel_r;
     wxPanel *panel_title;
@@ -72,8 +72,6 @@ public:
     void Onbutton_desc_r(wxCommandEvent & event);
     void button_job_disable_r();
     void button_hide_r();
-
-    wxHtmlWindow *HtmlWindow1;
 };
 
 #endif
