@@ -47,6 +47,7 @@ Rwin::Rwin(const wxString& title)
     panel_job = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 120), wxSize(120, 600));
 //panel do wyswietlania zawartosci
     panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
+    panel_show_h = new wxPanel(panel_show, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
 //tytul
     wxImage::AddHandler(new wxPNGHandler);
@@ -620,10 +621,9 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 void Rwin::Onbutton_desc_r(wxCommandEvent & WXUNUSED(event))
 {
     wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//logo.png"), wxBITMAP_TYPE_PNG);
     show_r -> Destroy();
-    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
-    show_r -> Update();
+    html_r = new wxHtmlWindow(panel_show, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
+    html_r -> LoadPage(_("data\\sample_1\\html\\task1.html"));
 }
 /*
 --------------------------------------------------
