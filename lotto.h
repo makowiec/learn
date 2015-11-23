@@ -1,5 +1,5 @@
-#ifndef LOTTO_HPP
-#define LOTTO_HPP
+#ifndef LOTTO_H
+#define LOTTO_H
 
 /*
 ============================================================================

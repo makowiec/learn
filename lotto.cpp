@@ -8,7 +8,7 @@ Description : Losowaie liczb bez powtorzen
 ============================================================================
 */
 
-#include "lotto.hpp"
+#include "lotto.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

@@ -9,7 +9,7 @@ Description : Okno dla danych z North ;)
 */
 
 #include "rwin.h"
-#include "lotto.hpp"
+#include "lotto.h"
 #include <iostream>
 #include <cstdio>
 #include <fstream>
