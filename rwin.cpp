@@ -623,6 +623,14 @@ void Rwin::Onbutton_pic_r(wxCommandEvent & WXUNUSED(event))
     Foobar.Printf( wxT("Obrazek do zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 */
+//wyswietlanie obrazka informacyjnego
+    wxImage::AddHandler(new wxPNGHandler);
+    wxBitmap bmp_show (wxT(".//image//info_page.png"), wxBITMAP_TYPE_PNG);
+    show_r -> Destroy();
+    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    show_r -> Update();
+
+//wyswietlenie przycisku res i desc
     panel_res -> Show();
     panel_desc -> Show();
 }
