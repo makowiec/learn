@@ -42,7 +42,7 @@ public:
     wxStaticBitmap *title_r;
     wxStaticBitmap *logo_r;
     wxStaticBitmap *show_r;
-    wxHtmlWindow *html_r;
+    wxHtmlWindow *html_info_r;
 
     wxPanel *panel_r;
     wxPanel *panel_title;

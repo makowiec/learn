@@ -573,13 +573,23 @@ void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 */
 void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 {
-    panel_show -> Show();
-    panel_show_h -> Hide();
+//ukrywanie i wyswietlanie paneli
+    panel_show -> Hide();
+    panel_show_h -> Show();
+
 //okno serwisowe
 /*    wxString Foobar;
     Foobar.Printf( wxT("Info do zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 */
+//przpisywanie wartosci 0 do html_info_r
+//jest to potrzedne gdy uzytkowni nie powroci z podstrony do strony glownej
+//i kliknie inny przycisk
+    if (html_info_r != 0)
+        {
+        html_info_r -> Destroy();
+        }
+
 // zamiana int na string
     std::ostringstream info_string;
     info_string << job_number_r;
@@ -588,16 +598,15 @@ void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 // ustawienie sciezki dla info
     std::string info_patch = ".//data//sample_";
                 info_patch += info_rs;
-                info_patch += "//png//info_";
+                info_patch += "//html//info";
                 info_patch += info_rs;
-                info_patch += ".png";
+                info_patch += ".html";
 
-    wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (info_patch, wxBITMAP_TYPE_PNG);
-    show_r -> Destroy();
-    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
-    show_r -> Update();
+//wyswietlanie pliku html
+    html_info_r = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
+    html_info_r -> LoadPage(info_patch);
 
+//wyswietlenie przycisku pic
     panel_pic -> Show();
 }
 /*
@@ -656,16 +665,17 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 */
 void Rwin::Onbutton_desc_r(wxCommandEvent & WXUNUSED(event))
 {
-    panel_show -> Hide();
-    panel_show_h -> Show();
-    if (html_r != 0)
-        {
-        html_r -> Destroy();
-        }
-    //wxImage::AddHandler(new wxPNGHandler);
-    //show_r -> Destroy();
-    html_r = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
-    html_r -> LoadPage(_("data\\sample_1\\html\\task1.html"));
+    panel_show -> Show();
+    panel_show_h -> Hide();
+
+//    panel_show -> Hide();
+//    panel_show_h -> Show();
+//    if (html_r != 0)
+//        {
+//        html_r -> Destroy();
+//        }
+//    html_r = new wxHtmlWindow(panel_show_h, wxID_ANY, wxPoint(0,0), wxSize(800,300), wxHW_DEFAULT_STYLE);
+//    html_r -> LoadPage(_("data\\sample_1\\html\\task1.html"));
 }
 /*
 --------------------------------------------------
