@@ -13,6 +13,7 @@ Description : Okno dla danych z North ;)
 
 #include <wx/wx.h>
 #include <wx/html/htmlwin.h>
+#include <wx/notebook.h>
 
 class Rwin : public wxFrame
 {
@@ -42,7 +43,9 @@ public:
     wxStaticBitmap *title_r;
     wxStaticBitmap *logo_r;
     wxStaticBitmap *show_r;
+
     wxHtmlWindow *html_info_r;
+    wxNotebook *res_book;
 
     wxPanel *panel_r;
     wxPanel *panel_title;
@@ -54,6 +57,10 @@ public:
     wxPanel *panel_job;
     wxPanel *panel_show;
     wxPanel *panel_show_h;
+    wxPanel *panel_show_b;
+    wxPanel *panel_book_pic;
+    wxPanel *panel_book_text;
+    wxPanel *panel_book_foto;
 
     void quit_r(wxCommandEvent & event);
     void Onbutton_job_r0(wxCommandEvent & event);

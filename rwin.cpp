@@ -36,7 +36,7 @@ Rwin::Rwin(const wxString& title)
     panel_r = new wxPanel(this, wxID_ANY);
 //panel tytulu
     panel_title = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 0), wxSize(800, 60));
-//panel czynnosci
+//panele czynnosci
     panel_info = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 60), wxSize(160, 60));
     panel_pic = new wxPanel(panel_r, wxID_ANY, wxPoint(160, 60), wxSize(160, 60));
     panel_res = new wxPanel(panel_r, wxID_ANY, wxPoint(320, 60), wxSize(160, 60));
@@ -45,9 +45,10 @@ Rwin::Rwin(const wxString& title)
     panel_logo = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 0), wxSize(120, 120));
 //panel zadan
     panel_job = new wxPanel(panel_r, wxID_ANY, wxPoint(800, 120), wxSize(120, 600));
-//panel do wyswietlania zawartosci
+//panele do wyswietlania zawartosci
     panel_show = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
     panel_show_h = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
+    panel_show_b = new wxPanel(panel_r, wxID_ANY, wxPoint(0, 120), wxSize(800, 600));
 
 //tytul
     wxImage::AddHandler(new wxPNGHandler);
@@ -132,6 +133,7 @@ void Rwin::Onbutton_job_r0(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 0 ];
@@ -177,6 +179,7 @@ void Rwin::Onbutton_job_r1(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 1 ];
@@ -222,6 +225,7 @@ void Rwin::Onbutton_job_r2(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 2 ];
@@ -267,6 +271,7 @@ void Rwin::Onbutton_job_r3(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 3 ];
@@ -311,6 +316,7 @@ void Rwin::Onbutton_job_r4(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 4 ];
@@ -355,6 +361,7 @@ void Rwin::Onbutton_job_r5(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 5 ];
@@ -399,6 +406,7 @@ void Rwin::Onbutton_job_r6(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 6 ];
@@ -443,6 +451,7 @@ void Rwin::Onbutton_job_r7(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 7 ];
@@ -486,6 +495,7 @@ void Rwin::Onbutton_job_r8(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 8 ];
@@ -530,6 +540,7 @@ void Rwin::Onbutton_job_r9(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //przypisanie wylosowanego numeru zadania
     job_number_r = draw_now[ 9 ];
@@ -575,6 +586,7 @@ void Rwin::Onbutton_info_r(wxCommandEvent & WXUNUSED(event))
 {
 //ukrywanie i wyswietlanie paneli
     panel_show -> Hide();
+    panel_show_b -> Hide();
     panel_show_h -> Show();
 
 //okno serwisowe
@@ -618,6 +630,7 @@ void Rwin::Onbutton_pic_r(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 //okno serwisowe
 /*    wxString Foobar;
     Foobar.Printf( wxT("Obrazek do zadania %d."), job_number_r);
@@ -641,13 +654,23 @@ void Rwin::Onbutton_pic_r(wxCommandEvent & WXUNUSED(event))
 */
 void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 {
-    panel_show -> Show();
+    panel_show_b -> Show();
+    panel_show -> Hide();
     panel_show_h -> Hide();
 //okno serwisowe
 /*    wxString Foobar;
     Foobar.Printf( wxT("Odpowied do zadania %d."), job_number_r);
     wxMessageBox(Foobar);
 */
+
+    res_book = new wxNotebook(panel_show_b, wxID_ANY, wxPoint(0,0), wxSize(800, 600));
+    panel_book_pic = new wxPanel(res_book, wxID_ANY, wxPoint(0, 0), wxSize(800, 600));
+    panel_book_text = new wxPanel(res_book, wxID_ANY, wxPoint(0, 0), wxSize(800, 600));
+    panel_book_foto = new wxPanel(res_book, wxID_ANY, wxPoint(0, 0), wxSize(800, 600));
+    res_book -> AddPage(panel_book_pic, _("Wynik"), false);
+    res_book -> AddPage(panel_book_text, _("Opis"), false);
+    res_book -> AddPage(panel_book_foto, _("Zdjêcia"), false);
+
 // zamiana int na string
     std::ostringstream res_string;
     res_string << job_number_r;
@@ -660,11 +683,11 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
                 res_patch += res_rs;
                 res_patch += ".png";
 
-    wxImage::AddHandler(new wxPNGHandler);
-    wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
-    show_r -> Destroy();
-    show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
-    show_r -> Update();
+    //wxImage::AddHandler(new wxPNGHandler);
+    //wxBitmap bmp_show (wxT(".//image//start_page.png"), wxBITMAP_TYPE_PNG);
+    //show_r -> Destroy();
+    //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
+    //show_r -> Update();
 }
 /*
 --------------------------------------------------
@@ -675,6 +698,7 @@ void Rwin::Onbutton_desc_r(wxCommandEvent & WXUNUSED(event))
 {
     panel_show -> Show();
     panel_show_h -> Hide();
+    panel_show_b -> Hide();
 
 //    panel_show -> Hide();
 //    panel_show_h -> Show();
