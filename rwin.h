@@ -43,9 +43,13 @@ public:
     wxStaticBitmap *title_r;
     wxStaticBitmap *logo_r;
     wxStaticBitmap *show_r;
+    wxStaticBitmap *show_t;
 
     wxHtmlWindow *html_info_r;
+
     wxNotebook *res_book;
+
+    wxBitmap *bmp_show;
 
     wxPanel *panel_r;
     wxPanel *panel_title;

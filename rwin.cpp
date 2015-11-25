@@ -671,6 +671,18 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     res_book -> AddPage(panel_book_text, _("Opis"), false);
     res_book -> AddPage(panel_book_foto, _("Zdjêcia"), false);
 
+    wxImage::AddHandler(new wxBMPHandler);
+
+    wxBitmap bmp_show (wxT("c:\\temp\\image_1.bmp"), wxBITMAP_TYPE_BMP);
+
+    //show_r -> Destroy();
+    show_t = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 0));
+    //show_t -> Set;
+    //show_t -> Update();
+
+
+
+/*
 // zamiana int na string
     std::ostringstream res_string;
     res_string << job_number_r;
@@ -688,6 +700,7 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     //show_r -> Destroy();
     //show_r = new wxStaticBitmap(panel_show, 0, bmp_show);
     //show_r -> Update();
+*/
 }
 /*
 --------------------------------------------------
