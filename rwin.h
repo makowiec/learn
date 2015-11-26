@@ -44,6 +44,7 @@ public:
     wxStaticBitmap *logo_r;
     wxStaticBitmap *show_r;
     wxStaticBitmap *show_t;
+    wxStaticBitmap *pic_r;
 
     wxHtmlWindow *html_info_r;
 

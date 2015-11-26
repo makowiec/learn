@@ -671,17 +671,42 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     res_book -> AddPage(panel_book_text, _("Opis"), false);
     res_book -> AddPage(panel_book_foto, _("Zdjêcia"), false);
 
+/*
+//////////////////////////////////////////////////
+                    PANEL BOOK PIC
+//////////////////////////////////////////////////
+*/
+// zapisiywanie wynikow do pliku
+    // tworzenie nowej bitmapy i wczytywanie zdjecia
+    wxBitmap *paper = new wxBitmap(1,1);
+    paper -> LoadFile("c:\\temp\\image_1.bmp", wxBITMAP_TYPE_BMP);
+
+    wxMemoryDC memDC;
+    memDC.SelectObject( *paper );
+
+    // rysowanie
+    memDC.SetPen(*wxYELLOW_PEN);
+    memDC.SetBrush(*wxTRANSPARENT_BRUSH);
+    memDC.DrawRectangle(wxRect(200, 200, 500, 500));
+
+    memDC.SelectObject( wxNullBitmap );
+
+    // zapisywanie stwoerzonego dziela :P
+    paper->SaveFile( _T("c:\\temp\\work_of_art.bmp"), wxBITMAP_TYPE_BMP, (wxPalette*)NULL );
+
+    // usuwanie bitmapy
+    delete paper;
+
+//wyswietlenie rezultatu
     wxImage::AddHandler(new wxBMPHandler);
+    wxBitmap bmp_show (wxT("c:\\temp\\work_of_art.bmp"), wxBITMAP_TYPE_BMP);
 
-    wxBitmap bmp_show (wxT("c:\\temp\\image_1.bmp"), wxBITMAP_TYPE_BMP);
-
-    //show_r -> Destroy();
-    show_t = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 0));
-    //show_t -> Set;
-    //show_t -> Update();
-
-
-
+    if (pic_r != 0)
+        {
+        pic_r -> Destroy();
+        }
+    pic_r = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 0));
+    pic_r -> Update();
 /*
 // zamiana int na string
     std::ostringstream res_string;
