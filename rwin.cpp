@@ -685,11 +685,14 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     memDC.SelectObject( *paper );
 
     // rysowanie
-    memDC.SetPen(*wxYELLOW_PEN);
+
+    wxPen myGreenPen(*wxGREEN,3,wxSOLID);
+    memDC.SetPen(myGreenPen);
     memDC.SetBrush(*wxTRANSPARENT_BRUSH);
     memDC.DrawRectangle(wxRect(200, 200, 500, 500));
 
-    memDC.SetPen(*wxRED_PEN);
+    wxPen myRedPen(*wxRED,5,wxSOLID);
+    memDC.SetPen(myRedPen);
     memDC.SetBrush(*wxTRANSPARENT_BRUSH);
     memDC.DrawRectangle(wxRect(100, 100, 500, 500));
 
