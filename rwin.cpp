@@ -707,7 +707,24 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 //wyswietlenie rezultatu
 
     wxImage obraz (wxT("c:\\temp\\work_of_art.bmp"), wxBITMAP_TYPE_BMP);
-    obraz.Rescale (800, 203, wxIMAGE_QUALITY_NORMAL );
+    float szer = obraz.GetWidth();
+    float wys = obraz.GetHeight();
+
+
+    float szer_new_f = 800;
+    float coma = szer_new_f / szer;
+    float wys_new_f = wys * coma;
+
+    int szer_new = szer_new_f;
+    int wys_new = wys_new_f;
+
+    cout << szer << endl;
+    cout << wys << endl;
+    cout << coma << endl;
+    cout << szer_new << endl;
+    cout << wys_new << endl;
+
+    obraz.Rescale (szer_new, wys_new, wxIMAGE_QUALITY_NORMAL );
     obraz.AddHandler(new wxBMPHandler);
 
     //wxImage::AddHandler = nowy (new wxBMPHandler);
@@ -718,7 +735,10 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
         {
         pic_r -> Destroy();
         }*/
-    pic_r = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 200));
+
+    int wys_zaw = (600 - wys_new) /2;
+
+    pic_r = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, wys_zaw));
 
     pic_r -> Update();
 
