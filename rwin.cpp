@@ -686,12 +686,12 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
 
     // rysowanie
 
-    wxPen myGreenPen(*wxGREEN,3,wxSOLID);
+    wxPen myGreenPen(*wxGREEN,10,wxSOLID);
     memDC.SetPen(myGreenPen);
     memDC.SetBrush(*wxTRANSPARENT_BRUSH);
     memDC.DrawRectangle(wxRect(200, 200, 500, 500));
 
-    wxPen myRedPen(*wxRED,5,wxSOLID);
+    wxPen myRedPen(*wxRED,10,wxSOLID);
     memDC.SetPen(myRedPen);
     memDC.SetBrush(*wxTRANSPARENT_BRUSH);
     memDC.DrawRectangle(wxRect(100, 100, 500, 500));
@@ -705,15 +705,23 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     delete paper;
 
 //wyswietlenie rezultatu
-    wxImage::AddHandler(new wxBMPHandler);
-    wxBitmap bmp_show (wxT("c:\\temp\\work_of_art.bmp"), wxBITMAP_TYPE_BMP);
 
-    if (pic_r != 0)
+    wxImage obraz (wxT("c:\\temp\\work_of_art.bmp"), wxBITMAP_TYPE_BMP);
+    obraz.Rescale (800, 203, wxIMAGE_QUALITY_NORMAL );
+    obraz.AddHandler(new wxBMPHandler);
+
+    //wxImage::AddHandler = nowy (new wxBMPHandler);
+
+    wxBitmap bmp_show ((obraz), wxBITMAP_TYPE_BMP);
+
+    /*if (pic_r != 0)
         {
         pic_r -> Destroy();
-        }
-    pic_r = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 0));
+        }*/
+    pic_r = new wxStaticBitmap(panel_book_pic, 0, bmp_show, wxPoint(0, 200));
+
     pic_r -> Update();
+
 /*
 // zamiana int na string
     std::ostringstream res_string;
