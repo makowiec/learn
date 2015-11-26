@@ -689,6 +689,10 @@ void Rwin::Onbutton_res_r(wxCommandEvent & WXUNUSED(event))
     memDC.SetBrush(*wxTRANSPARENT_BRUSH);
     memDC.DrawRectangle(wxRect(200, 200, 500, 500));
 
+    memDC.SetPen(*wxRED_PEN);
+    memDC.SetBrush(*wxTRANSPARENT_BRUSH);
+    memDC.DrawRectangle(wxRect(100, 100, 500, 500));
+
     memDC.SelectObject( wxNullBitmap );
 
     // zapisywanie stwoerzonego dziela :P
